@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root{
+  --font-size:16px;
+  --fuente-primaria: "Fredoka", sans-serif;
+
+  /*Color*/
+  --negro:#200A2A;
+  --blanco:#fff;
+}
+
+/*Reset de toda la vida*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+  position: relative;
+  font-size: var(--font-size);
+  font-family: var(--fuente-primaria);
+  color:var(--negro);
+}
+body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+a , li{
+  list-style-type: none;
+  text-decoration:none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+}
+
+/*Header*/
+.header-container{
+  position: relative;
+  width: 100vw;
+  z-index: 999;
+  font-size: 1.5rem;
+  background-color: var(--blanco);
+  padding: 1.5rem 4rem;
+  border-bottom:solid var(--negro) 4px;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.5rem;
+  font-size: 1.5rem;
+}
+.logo svg{
+  width: 3.5rem;
+  height: auto;
+}
+.logo svg path:first-child{
+  fill: transparent;
+}
+.logo svg path{
+  stroke: var(--negro);
+  fill: var(--negro);
+}
+
+.nav-menu-items{
+  display: flex;
+}
+.nav-menu-items li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+.nav-menu-items li a{
+  padding: 1rem;
+}
+
+/*All Sections*/
+section{
+  max-width: 1280px;
+  padding: 4rem 4rem;
+  margin: 0 auto;
+}
+
+/*Linea de Animcacion de Link*/
+.nav-menu-items li > a::after{
+  content: '';
+  position: relative;
+  display: block;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  bottom: 4px;
+  background-color: var(--negro);
+  border-radius: 2rem;
+  transition: all 0.1s ease;
+}
+.nav-menu-items li > a:hover::after{
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+/*hero section*/
+.hero-text{
+  max-width: 700px;
+}
+.hero-text h1{
+  font-size: 4rem;
+  margin-block: 2rem;
+  line-height: 1.2;
+}
+
+.hero-text p{
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+.buttons-container{
+  display: flex;
+  gap:2rem;
+}
+
+/*Button*/
+.button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  border:solid var(--negro) 4px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  background: linear-gradient(to left,transparent 50%,var(--negro) 50%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+  
+}
+.button:hover, .button:focus{
+  background-position:left bottom;
+  color: var(--blanco);
+}

@@ -1,7 +1,8 @@
 export default function Header(){
-    return(<header className="header-container">
+    return(
+    <header className="header-container">
         <div className="header-menu">
-          <a className="menu-logo" href="#">
+          <a className="logo" href="#">
             <svg
               width={127}
               height={118}
@@ -12,7 +13,7 @@ export default function Header(){
               <path
                 d="M91.8 107.609C84.6 107.609 77.88 104.739 72.6 100.435C67.32 105.217 60.6 107.609 53.4 107.609C37.56 107.609 24.6 94.6956 24.6 78.913V40.6522C24.6 35.3913 28.92 31.087 34.2 31.087C39.48 31.087 43.8 35.3913 43.8 40.6522V74.1304C43.8 79.3913 48.12 83.6956 53.4 83.6956C58.68 83.6956 63 79.3913 63 74.1304V40.6522C63 35.3913 67.32 31.087 72.6 31.087C77.88 31.087 82.2 35.3913 82.2 40.6522V74.1304C82.2 79.3913 86.52 83.6956 91.8 83.6956C97.08 83.6956 101.4 79.3913 101.4 74.1304V40.6522C101.4 35.3913 105.72 31.087 111 31.087C116.28 31.087 120.6 35.3913 120.6 40.6522V78.913C120.6 94.6956 107.64 107.609 91.8 107.609Z"
                 stroke="black"
-                strokeWidth={4}
+                strokeWidth={8}
                 strokeMiterlimit={10}
               />
               <path
@@ -22,8 +23,8 @@ export default function Header(){
                 strokeMiterlimit={10}
               />
             </svg>
+            <span className="logo-titulo">mathweb.</span>
           </a>
-          <div className="nav-container">
             <nav className="nav-menu">
               <ul className="nav-menu-items">
                 <li className="nav-menu-item">
@@ -40,7 +41,6 @@ export default function Header(){
                 </li>
               </ul>
             </nav>
-          </div>
         </div>
       </header>
       );
