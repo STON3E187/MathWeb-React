@@ -1,5 +1,7 @@
-import Header from "./components/header"
-import Hero from "./components/hero"
+import Courses from "./components/courses";
+import Header from "./components/header";
+import Hero from "./components/hero";
+import './index.css';
 
 function App() {
   return (
@@ -7,6 +9,7 @@ function App() {
     <Header />
     <main>
       <Hero />
+      <Courses />
     </main>
     </>
   )

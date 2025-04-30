@@ -36,6 +36,15 @@ a , li{
   color: inherit;
 }
 
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+}
 /*Header*/
 .header-container{
   position: relative;
@@ -152,4 +161,97 @@ section{
 .button:hover, .button:focus{
   background-position:left bottom;
   color: var(--blanco);
+}
+
+/*Course Section*/
+
+/*Course Header*/
+.course-header{
+  flex-direction: column;
+  text-align: center;
+  margin-block: 4rem;
+  margin-bottom: 4rem;
+}
+.course-header h2{
+  font-size: 2rem;
+}
+.course-header p{
+  font-size: 1.5rem;
+}
+
+/*Course Cards*/
+.course-cards{
+  display: flex;
+}
+.course-cards .course-card.activate{
+  background-color: red;
+}
+.course-card{
+  display: inline-flex;
+  border:solid var(--negro) 4px;
+  border-radius:1.5rem;
+  background-color: var(--negro);
+  color: var(--blanco);
+  overflow: hidden;
+}
+.card-tittle{ 
+   cursor: pointer;
+}
+.card-tittle h2{
+  flex: 0 0 auto;
+  border: solid blue 5px;
+  padding: 1rem;
+  font-size: 3rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-container{
+  max-height: auto;
+  padding: 2rem;
+  color: var(--negro);
+  background-color: var(--blanco);
+  border-radius:1.5rem 0 0 1.5rem;
+}
+.card-content-text{
+  display: flex;
+}
+.card-content{
+  display: flex;
+  flex-direction:column;
+  gap:1rem;
+  max-width: 400px;
+}
+.content-list > li{
+  list-style-position: inside;
+  list-style-type: disc;
+}
+.card-price{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.card-price .discount{
+  position: relative;
+  opacity: 0.8;
+  font-size: 2rem;
+}
+.card-price .discount::after{
+content: '';
+position: absolute;
+top:50%;
+left:0;
+width: 100%;
+height: 4px;
+background-color: var(--negro);
+border-radius: 30px;
+}
+
+.card-buttons{
+  display: flex;
+  padding: 1rem 0;
+  justify-content:space-around;
+  align-items: center;
 }
