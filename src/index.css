@@ -1,10 +1,11 @@
 :root{
   --font-size:16px;
   --fuente-primaria: "Fredoka", sans-serif;
-
   /*Color*/
   --negro:#200A2A;
   --blanco:#fff;
+
+  --animacion:cubic-bezier(.11,.79,.1,1);
 }
 
 /*Reset de toda la vida*/
@@ -117,7 +118,7 @@ section{
 }
 .nav-menu-items li > a:hover::after{
   width: 100%;
-  transition: all 0.1s ease;
+  transition: all 0.3s var(--animacion);
 }
 
 /*hero section*/
@@ -153,7 +154,7 @@ section{
   background: linear-gradient(to left,transparent 50%,var(--negro) 50%);
   background-size: 300% 100%;
   background-position: right bottom;
-  transition: all 0.3s ease-out;
+  transition: all .7s var(--animacion);
 }
 .button:hover, .button:focus{
   background-position:left bottom;
@@ -180,7 +181,6 @@ section{
 .course-cards{
   display: flex;
 }
-
 .course-card{
   display: flex;
   border:solid var(--negro) 4px;
@@ -188,7 +188,7 @@ section{
   background-color: var(--blanco);
   color: var(--negro);
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(.13,1.07,.31,1.01);
+  transition: all 0.3s var(--animacion);
 }
 .course-card:hover, .course-card:focus{
   background-color: var(--negro);
@@ -241,7 +241,7 @@ section{
   list-style-type: disc;
 }
 /*Price Tag*/
-.card-price, .pack-price{
+.card-price{
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -258,7 +258,7 @@ top:50%;
 left:0;
 width: 100%;
 height: 4px;
-background-color: var(--negro);
+background-color: inherit;
 border-radius: 30px;
 }
 
@@ -269,26 +269,85 @@ border-radius: 30px;
   align-items: center;
 }
 
-/*Special Packs*/
+/*Special Packs
 .packs{
   display: grid;
-  align-items: start;
+  gap:1rem;
+  grid-template-columns: max-content max-content max-content;
+  align-items: baseline;
+}*/
+.packs{
+  display: flex;
   justify-content: center;
-  gap:3rem;
-  grid-template-columns:repeat(3, 1fr);
-  grid-template-rows: auto;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .packs-header{
-  background-color: blue;
-  padding: 2rem;
+  align-self: center;
+  padding: 1.5rem;
 }
-.packs-header h2, .packs-header span{
-  display: inline;
-  background-color: red;
+.packs-header h2,.packs-header span{
+  display: block;
   font-size: 3rem;
 }
 
 .pack-card{
-  padding: 2rem;
-  background-color: green;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+  gap:0.5rem;
+  padding: 1rem;
+  border:solid var(--negro) 4px;
+  border-radius: 1.5rem;
+  transition: all 0.3s var(--animacion);
+}
+.pack-card:hover, .pack-card:focus{
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.pack-card h3{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.pack-list{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  gap:0.5rem;
+  font-size: 1rem;
+}
+.pack-list > li{
+  list-style-position: outside;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+/*Pack Prices*/
+.pack-price{
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.pack-discount{
+  position: relative;
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+.pack-discount::after{
+  content: '';
+  position: absolute;
+  top:50%;
+  left:0;
+  width: 100%;
+  height: 4px;
+  background-color: inherit;
+  border-radius: 30px;
+  }
+.pack-saveoff{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
