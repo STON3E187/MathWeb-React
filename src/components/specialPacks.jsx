@@ -1,74 +1,91 @@
 export default function SpecialPacks(){
+   
+    const packList = [
+
+        {
+            "title": "(Super Pack Completo)2",
+            "list" : [
+                "Taller de transición a Universidad (2 horas).",
+                "Todos los niveles."
+            ],
+            "price" : "Desde $60",
+            "discount" : null,
+            "saveOff" : null
+        },
+        {
+            "title": "Camino a la (Universidad)",
+            "list" : [
+                "Nivel Intermedio + Avanzado.",
+                "Taller de transición a Universidad (2 horas)."
+            ],
+            "price" : "Desde $45",
+            "discount" : null,
+            "saveOff" : null
+        },
+        {
+            "title": "Aprendizaje Continuo++",
+            "list" : [
+                "Nivel Intermedio + Avanzado.",
+                "Guía de apoyo para padres (PDF).",
+                "1 sesión grupal familiar (dudas generales).",
+                "6 sesiones grupales (3 por nivel)."
+            ],
+            "price" : "Desde $25",
+            "discount" : null,
+            "saveOff" : null
+        },
+        {
+            "title": "Institucional / Intermedio",
+            "list" : [
+                "5 x paquetes de Nivel Intermedio.",
+                "Informes de progreso grupales.",
+                "Webinar para profesores (2 horas)."
+            ],
+            "price" : "Desde $50",
+            "discount" : "$10c/u",
+            "saveOff" : "Ahorra $25 - $50"
+        },
+        {
+            "title": "Institucional / Avanzado",
+            "list" : [
+                "5 x paquetes de Nivel Avanzado.",
+                "Informes de progreso grupales.",
+                "Webinar para profesores (2 horas).",
+                "Taller de transición a Universidad (2 horas)."
+            ],
+            "price" : "Desde $50",
+            "discount" : "$10c/u",
+            "saveOff" : "Ahorra $25 - $50"
+        }
+];
+   
     return (
         <>
         {/*Paquetes Especiales*/}
-        <section className="packs">
+            <section className="packs">
+                <h2 className="packs-header">Paquetes<span>Especiales</span></h2>
 
-            <div className="packs-header">
-                <h2>Paquetes<span>Especiales</span></h2>
-            </div>
-
-            <div className="pack-card">
-                <h3>(Super Pack Completo)2</h3>
-                <ul className="pack-list">
-                    <li>Taller de transición a Universidad (2 horas).</li>
-                    <li>Todos los niveles.</li>                
-                </ul>
-                <p className="pack-price">Desde $60</p>
-            </div>
-
-            <div className="pack-card">
-                <h3>Camino a la (Universidad)</h3>
-                <ul className="pack-list">
-                    <li>Nivel Intermedio + Avanzado.</li>
-                    <li>Taller de transición a Universidad (2 horas).</li>
-                </ul>
-                <p className="pack-price">Desde $45</p>
-            </div>
-
-            <div className="pack-card">
-                <h3>Aprendizaje Continuo++</h3>
-                <ul className="pack-list">
-                    <li>Nivel Principiante + Intermedio.</li>
-                    <li>Guía de apoyo para padres (PDF).</li>
-                    <li>1 sesión grupal familiar (dudas generales).</li>
-                    <li>6 sesiones grupales (3 por nivel).</li>
-                </ul>
-                <p className="pack-price">Desde $25</p>
-            </div>
-
-            <div className="pack-card">
-                <h3>Institucional / Intermedio</h3>
-                <ul className="pack-list">
-                    <li>5 x paquetes de Nivel Intermedio.</li>
-                    <li>Informes de progreso grupales.</li>
-                    <li>Webinar para profesores (2 horas).</li>
-                </ul>
-                <div className="price-wrap">
-                    <p className="pack-price">
-                        Desde $50<span className="pack-discount">$10c/u</span>
-                    </p>
-                    <p className="pack-saveoff">Ahorra $25 - $50</p>
-                </div>
-            </div>
-
-            <div className="pack-card">
-                <h3>Institucional / Avanzado</h3>
-                <ul className="pack-list">
-                    <li>5 x paquetes de Nivel Avanzado.</li>
-                    <li>Informes de progreso grupales.</li>
-                    <li>Webinar para profesores (2 horas).</li>
-                    <li>Taller de transición a Universidad (2 horas).</li>
-                </ul>
-                <div className="price-wrap">
-                    <p className="pack-price">
-                        Desde $80<span className="pack-discount">$20c/u</span>
-                    </p>
-                    <p className="pack-saveoff">Ahorra $75 - $150</p>
-                </div> 
-            </div>
-
-        </section>
+                {packList.map(function(pack ,index){
+                    return (
+                        <div key={index} className="pack-card">
+                                <h3>{pack.title}</h3>
+                                <ul className="pack-list">
+                                    {pack.list.map(
+                                        function(sentence, sentenceIndex){
+                                            return(
+                                            <li key={sentenceIndex}>{sentence}</li>
+                                        );
+                                    })}
+                                </ul>
+                            <div className="price-wrap">
+                                    <p className="pack-price">
+                                        {pack.price}<span className="pack-discount">{pack.discount}</span>
+                                    </p>
+                                    <p className="pack-saveoff">{pack.saveOff}</p>
+                            </div>
+                        </div>);
+                })}
+            </section>
         </>
     )
 }

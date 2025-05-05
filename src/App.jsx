@@ -1,6 +1,7 @@
 import Courses from "./components/courses";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import LearnProcess from "./components/learnProcess";
 import SpecialPacks from "./components/specialPacks";
 import MiddleTittle from "./components/middleTittle";
 import Comment from "./components/comment";
@@ -13,6 +14,7 @@ function App() {
     <Header />
     <main>
       <Hero />
+      <LearnProcess />
       <MiddleTittle />
       <Courses />
       <SpecialPacks />
