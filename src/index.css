@@ -62,7 +62,16 @@ h2{
 h3{
   font-size: 1.5rem;
 }
-/*Header*/
+
+/*All Sections*/
+section{
+  display: block;
+  position: relative;
+  padding: 7rem 4rem;
+  margin: 0 auto;
+}
+
+/*****************Header*****************/
 .header-container{
   width: 100vw;
   z-index: 999;
@@ -113,15 +122,7 @@ h3{
   padding: 1rem;
 }
 
-/*All Sections*/
-section{
-  display: block;
-  position: relative;
-  padding: 7rem 4rem;
-  margin: 0 auto;
-}
-
-/*Linea de Animcacion de Link*/
+/*****************Linea de Animcacion de Link*****************/
 .nav-menu-items li > a::after{
   content: '';
   position: relative;
@@ -139,7 +140,7 @@ section{
   transition: all 0.3s var(--animacion);
 }
 
-/*hero section*/
+/*****************Hero Section*****************/
 .hero-text{
   max-width: 700px;
 }
@@ -157,7 +158,7 @@ section{
   gap:2rem;
 }
 
-/*Buttons*/
+/*****************Buttons*****************/
 .button{
   display: inline-flex;
   justify-content: center;
@@ -177,16 +178,17 @@ section{
   color: var(--blanco);
 }
 
-/*Process Section*/
+/*****************Process Section*****************/
 .learn-proc-container{
   display: grid;
+  max-width: 1280px;
   grid-template-columns: 1.125fr 1fr;
   grid-template-rows: 1fr;
   gap: 2rem;
   align-items: start;
   width: 100%;
 }
-.learn-proc-tittle{
+.learn-proc-title{
   position: sticky;
   top: 2rem;
 }
@@ -195,8 +197,9 @@ section{
   font-size: 2rem;
 }
 
-/*Middle Tittle*/
+/*****************Middle title*****************/
 .middle{
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -213,9 +216,12 @@ section{
 .middle p{
   font-size: 1.5rem;
 }
-/*Course Section*/
+/*****************Course Section*****************/
 
 /*Course Header*/
+.course{
+  max-width: 1280px;
+}
 .course-header{
   flex-direction: column;
   text-align: center;
@@ -228,7 +234,7 @@ section{
   font-size: 1.5rem;
 }
 
-/*Course Cards*/
+/*****************Course Cards*****************/
 .course-cards{
   display: flex;
   justify-content: center;
@@ -237,7 +243,7 @@ section{
   display: flex;
   transition: all 0.3s var(--animacion);
 }
-.card-tittle{
+.card-title{
   display: inline-flex;
   cursor: pointer;
   height: fit-content;
@@ -252,12 +258,12 @@ section{
   border-radius:2rem;
   min-height: 500px;
 }
-.card-tittle:hover, .card-tittle:focus{
+.card-title:hover, .card-title:focus{
   background-color: var(--negro);
   color: var(--blanco);
 }
 /*Interactividad del las cartas*/
-.card-tittle.activate{
+.card-title.activate{
   border:solid var(--negro) 4px;
   border-left: 0;
   border-radius: 0 2rem 2rem 0 ;
@@ -326,6 +332,7 @@ border-radius: 2rem;
 
 /*Special Packs*/
 .packs{
+  max-width: 1280px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -401,24 +408,42 @@ border-radius: 2rem;
   text-align: center;
 }
 
-/*Comments Section*/
+/*****************Comments Section*****************/
 .comments{
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 3rem;
 }
 /*Comments card*/
-.comments-container{
-  overflow-x: scroll;
-  width: 100%;
-}
-.comments-container ul{
+.comment-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
   padding: 4rem 0;
+}
+.comment-button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border:solid var(--negro) 4px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  background: linear-gradient(to left,transparent 50%,var(--rojo) 50%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all .7s var(--animacion);
+}
+.comment-button:first-child{
+  transform: rotate(180deg);
+}
+.comment-button:hover, .comment-button:focus,.comment-button:hover svg path, .comment-button:focus svg path{
+  background-position:left bottom;
+  fill: var(--blanco);
 }
 .comment-card{
   --padding:1rem;
@@ -449,7 +474,7 @@ border-radius: 2rem;
 .name{
   font-size: 2rem;
 }
-.sub-tittle{
+.sub-title{
   font-size: 1.5rem;
 }
 .text-comment{
@@ -466,7 +491,7 @@ border-radius: 2rem;
   font-weight: bold;
 }
 
-/*Footer*/
+/*****************Footer*****************/
 .footer{
   background-color: var(--negro);
   display: flex;

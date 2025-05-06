@@ -1,67 +1,10 @@
-export default function SpecialPacks(){
-   
-    const packList = [
+import { packList } from "../data/allData";
 
-        {
-            "title": "(Super Pack Completo)2",
-            "list" : [
-                "Taller de transición a Universidad (2 horas).",
-                "Todos los niveles."
-            ],
-            "price" : "Desde $60",
-            "discount" : null,
-            "saveOff" : null
-        },
-        {
-            "title": "Camino a la (Universidad)",
-            "list" : [
-                "Nivel Intermedio + Avanzado.",
-                "Taller de transición a Universidad (2 horas)."
-            ],
-            "price" : "Desde $45",
-            "discount" : null,
-            "saveOff" : null
-        },
-        {
-            "title": "Aprendizaje Continuo++",
-            "list" : [
-                "Nivel Intermedio + Avanzado.",
-                "Guía de apoyo para padres (PDF).",
-                "1 sesión grupal familiar (dudas generales).",
-                "6 sesiones grupales (3 por nivel)."
-            ],
-            "price" : "Desde $25",
-            "discount" : null,
-            "saveOff" : null
-        },
-        {
-            "title": "Institucional / Intermedio",
-            "list" : [
-                "5 x paquetes de Nivel Intermedio.",
-                "Informes de progreso grupales.",
-                "Webinar para profesores (2 horas)."
-            ],
-            "price" : "Desde $50",
-            "discount" : "$10c/u",
-            "saveOff" : "Ahorra $25 - $50"
-        },
-        {
-            "title": "Institucional / Avanzado",
-            "list" : [
-                "5 x paquetes de Nivel Avanzado.",
-                "Informes de progreso grupales.",
-                "Webinar para profesores (2 horas).",
-                "Taller de transición a Universidad (2 horas)."
-            ],
-            "price" : "Desde $50",
-            "discount" : "$10c/u",
-            "saveOff" : "Ahorra $25 - $50"
-        }
-];
+export default function SpecialPacks(){
+
    
     return (
         <>
-        {/*Paquetes Especiales*/}
             <section className="packs">
                 <h2 className="packs-header">Paquetes<span>Especiales</span></h2>
 

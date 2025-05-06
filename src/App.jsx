@@ -3,7 +3,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import LearnProcess from "./components/learnProcess";
 import SpecialPacks from "./components/specialPacks";
-import MiddleTittle from "./components/middleTittle";
+import MiddleTitle from "./components/middleTitle";
 import Comment from "./components/comment";
 import Footer from "./components/footer";
 import './index.css';
@@ -15,7 +15,7 @@ function App() {
     <main>
       <Hero />
       <LearnProcess />
-      <MiddleTittle />
+      <MiddleTitle />
       <Courses />
       <SpecialPacks />
       <Comment />

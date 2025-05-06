@@ -1,88 +1,67 @@
-export default function Comment(){
-    return(
-<>
-    <section className="comments">
-        <h2>Que dicen nuestros estudiantes</h2>
-        <div className="comments-container">
-            <ul>
-            <li className="comment-card">
-                    <div className="comment-head">
-                        <img src="" alt="" />
-                        <div className="text-wrap">
-                            <h3 className="name">Aaron J. Trujillo A.</h3>
-                            <p className="sub-tittle">Estudiante de Bachiderato</p>
-                            <p className="time">Escrito hace 2 semanas</p>
-                        </div>
-                    </div>
-                    <div className="text-comment">
-                        <p className="sentence">Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.</p>
-                        <div className="star-rate">
-                            {/*Just decoration, change later*/}
-                            <span>4,5 / 5</span>
-                            <div className="stars"></div>
-                        </div>
-                    </div>
-                </li>
+import { useState } from 'react';
+import ArrowLogo from "../assets/arrow-logo";
+import { commentsContent } from '../data/allData';
 
-                <li className="comment-card">
-                    <div className="comment-head">
-                        <img src="" alt="" />
-                        <div className="text-wrap">
-                            <h3 className="name">Aaron J. Trujillo A.</h3>
-                            <p className="sub-tittle">Estudiante de Bachiderato</p>
-                            <p className="time">Escrito hace 2 semanas</p>
-                        </div>
-                    </div>
-                    <div className="text-comment">
-                        <p className="sentence">Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.</p>
-                        <div className="star-rate">
-                            {/*Just decoration, change later*/}
-                            <span>4,5 / 5</span>
-                            <div className="stars"></div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li className="comment-card">
-                    <div className="comment-head">
-                        <img src="" alt="" />
-                        <div className="text-wrap">
-                            <h3 className="name">Aaron J. Trujillo A.</h3>
-                            <p className="sub-tittle">Estudiante de Bachiderato</p>
-                            <p className="time">Escrito hace 2 semanas</p>
-                        </div>
-                    </div>
-                    <div className="text-comment">
-                        <p className="sentence">Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.</p>
-                        <div className="star-rate">
-                            {/*Just decoration, change later*/}
-                            <span>4,5 / 5</span>
-                            <div className="stars"></div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li className="comment-card">
-                    <div className="comment-head">
-                        <img src="" alt="" />
-                        <div className="text-wrap">
-                            <h3 className="name">Aaron J. Trujillo A.</h3>
-                            <p className="sub-tittle">Estudiante de Bachiderato</p>
-                            <p className="time">Escrito hace 2 semanas</p>
-                        </div>
-                    </div>
-                    <div className="text-comment">
-                        <p className="sentence">Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.</p>
-                        <div className="star-rate">
-                            {/*Just decoration, change later*/}
-                            <span>4,5 / 5</span>
-                            <div className="stars"></div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+export default function Comment() {
+  const [actIndex, setActIndex] = useState(0);
+
+  // Corrección: Las funciones estaban invertidas (before/after)
+  const showNext = () => {
+    setActIndex((prev) => 
+      prev + 2 >= commentsContent.length ? 0 : prev + 2
+    );
+  };
+
+  const showPrev = () => {
+    setActIndex((prev) => 
+      prev - 2 < 0 ? commentsContent.length - 2 : prev - 2
+    );
+  };
+
+  const commentsVisible = commentsContent.slice(actIndex, actIndex + 2);
+
+  return (
+    <section className="comments">
+      <h2>Qué dicen nuestros estudiantes</h2>
+
+      <div className="comment-container">
+        <button 
+            onClick={showPrev} 
+            className="comment-button left"
+            aria-label="Comentarios anteriores"
+            >
+            <ArrowLogo />
+        </button>
+            
+        {commentsVisible.map((comment, index) => (
+          <div key={index} className="comment-card">
+            <div className="comment-head">
+              <img src={comment.avatar} alt={`Foto de ${comment.name}`} />
+              <div className="text-wrap">
+                <h3 className="name">{comment.name}</h3>
+                <p className="sub-title">{comment.subTitle}</p>
+                <p className="time">{comment.time}</p>
+              </div>
+            </div>
+            <div className="text-comment">
+              <p className="sentence">"{comment.comment}"</p>
+              <div className="star-rate">
+                <span>{comment.score} / 5</span>
+                <div className="stars"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+
+        <button 
+          onClick={showNext} 
+          className="comment-button"
+          aria-label="Siguientes comentarios"
+        >
+          <ArrowLogo />
+        </button>
+      </div>
     </section>
-</>
-    )
+  );
 }

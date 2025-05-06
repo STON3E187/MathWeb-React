@@ -1,0 +1,7 @@
+.custom-style{
+    width: 100%;
+}
+.custom-style .swiper-wrapper{
+    display: inline-flex;
+    width: 100%;
+}

@@ -3,7 +3,7 @@ export default function LearnProcess(){
         <>
             <section className="learn-proc">
                 <div className="learn-proc-container">
-                    <div className="learn-proc-tittle">
+                    <div className="learn-proc-title">
                         <h2>Te acompañamos de la idea a la implementación técnica</h2>
                         <p>Nuestros servicios en detalle</p>
                     </div>

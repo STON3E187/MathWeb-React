@@ -1,4 +1,4 @@
-export default function MiddleTittle(){
+export default function MiddleTitle(){
     return (
         <>
         <section className="middle">

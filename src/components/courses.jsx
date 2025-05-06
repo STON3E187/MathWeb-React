@@ -6,23 +6,23 @@ const cardPrincipiante = useRef(null);
 const cardIntermedio = useRef(null);
 const cardAvanzado = useRef(null);
 
-const cardPrincipianteTittle = useRef(null);
-const cardIntermedioTittle = useRef(null);
-const cardAvanzadoTittle = useRef(null);
+const cardPrincipianteTitle = useRef(null);
+const cardIntermedioTitle = useRef(null);
+const cardAvanzadoTitle = useRef(null);
 
-const toggleClassAll = (card, tittle) =>{
+const toggleClassAll = (card, title) =>{
 
     const allCard = [cardPrincipiante, cardIntermedio, cardAvanzado];
-    const allCardTittle = [cardPrincipianteTittle, cardIntermedioTittle, cardAvanzadoTittle];
+    const allCardTitle = [cardPrincipianteTitle, cardIntermedioTitle, cardAvanzadoTitle];
     
     allCard.forEach((reference) => {
         if (reference.current){
             reference.current.classList.toggle("activate", reference === card);
         }
     });
-    allCardTittle.forEach((reference) => {
+    allCardTitle.forEach((reference) => {
         if (reference.current){
-            reference.current.classList.toggle("activate", reference === tittle);
+            reference.current.classList.toggle("activate", reference === title);
         }
     });
 
@@ -45,7 +45,7 @@ return (<>
 
         {/*Carta de Principiante*/}
         <div className="course-card" >
-            <h2 className="card-tittle activate" ref={cardPrincipianteTittle} onClick={() => toggleClassAll(cardPrincipiante, cardPrincipianteTittle)}>Nivel Principiante</h2>
+            <h2 className="card-title activate" ref={cardPrincipianteTitle} onClick={() => toggleClassAll(cardPrincipiante, cardPrincipianteTitle)}>Nivel Principiante</h2>
             <div className="card-container activate" ref={cardPrincipiante}>
                     <div className="card-content-text">
                         <div className="card-content">
@@ -121,7 +121,7 @@ return (<>
 
         {/*Carta de Intermedio*/}
         <div className="course-card">
-            <h2 className="card-tittle" ref ={cardIntermedioTittle}onClick={() => toggleClassAll(cardIntermedio, cardIntermedioTittle)}>Nivel Intermedio</h2>
+            <h2 className="card-title" ref ={cardIntermedioTitle}onClick={() => toggleClassAll(cardIntermedio, cardIntermedioTitle)}>Nivel Intermedio</h2>
             <div className="card-container" ref={cardIntermedio}>
                     <div className="card-content-text">
                         <div className="card-content">
@@ -183,7 +183,7 @@ return (<>
 
         {/*Carta de Avanzado*/}
         <div className="course-card">
-            <h2 className="card-tittle" ref={cardAvanzadoTittle} onClick={() => toggleClassAll(cardAvanzado, cardAvanzadoTittle)}>Nivel Avanzado</h2>
+            <h2 className="card-title" ref={cardAvanzadoTitle} onClick={() => toggleClassAll(cardAvanzado, cardAvanzadoTitle)}>Nivel Avanzado</h2>
             <div className="card-container" ref={cardAvanzado}>
                     <div className="card-content-text">
                         <div className="card-content">
