@@ -16,10 +16,12 @@ const toggleClassAll = (card, title) =>{
     const allCardTitle = [cardPrincipianteTitle, cardIntermedioTitle, cardAvanzadoTitle];
     
     allCard.forEach((reference) => {
+        console.log(reference.current);
         if (reference.current){
             reference.current.classList.toggle("activate", reference === card);
         }
     });
+
     allCardTitle.forEach((reference) => {
         if (reference.current){
             reference.current.classList.toggle("activate", reference === title);
@@ -33,20 +35,18 @@ return (<>
   <section className="course">
 
     <div className="course-header">
-      <h2>Las matematicas no sirven para nada</h2>
+      <h2>Aprende lo que necesitas, entiende lo que haces</h2>
       <p>
-        Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
-        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      Nuestros cursos combinan explicaciones paso a paso, situaciones reales y herramientas visuales que te ayudan a dominar cada tema antes de llegar a la universidad.
       </p>
     </div>
 
     <div className="course-cards">
 
         {/*Carta de Principiante*/}
-        <div className="course-card" >
-            <h2 className="card-title activate" ref={cardPrincipianteTitle} onClick={() => toggleClassAll(cardPrincipiante, cardPrincipianteTitle)}>Nivel Principiante</h2>
-            <div className="card-container activate" ref={cardPrincipiante}>
+        <div className="course-card beginner" >
+            <h2 className="card-title" ref={cardPrincipianteTitle} onClick={() => toggleClassAll(cardPrincipiante, cardPrincipianteTitle)}>Nivel Principiante</h2>
+            <div className="card-container" ref={cardPrincipiante}>
                     <div className="card-content-text">
                         <div className="card-content">
                         <h2>Recursos</h2>
@@ -103,7 +103,7 @@ return (<>
                             Introducción a la estadística básica (gráficas de barras).
                             </li>
                         </ul>
-                        <p className="card-price">
+                        <p className="card-price beginner">
                         Desde $10<span className="discount">$15</span>
                         </p>
                         </div>
@@ -120,7 +120,7 @@ return (<>
         </div>
 
         {/*Carta de Intermedio*/}
-        <div className="course-card">
+        <div className="course-card intermediate">
             <h2 className="card-title" ref ={cardIntermedioTitle}onClick={() => toggleClassAll(cardIntermedio, cardIntermedioTitle)}>Nivel Intermedio</h2>
             <div className="card-container" ref={cardIntermedio}>
                     <div className="card-content-text">
@@ -165,7 +165,7 @@ return (<>
                             <li>Probabilidad básica y estadística (media, moda, mediana).</li>
                             <li>Introducción a la trigonometría (seno, coseno, tangente).</li>
                         </ul>
-                        <p className="card-price">
+                        <p className="card-price intermediate">
                             Desde $20<span className="discount">$30</span>
                         </p>
                         </div>
@@ -182,7 +182,7 @@ return (<>
         </div>
 
         {/*Carta de Avanzado*/}
-        <div className="course-card">
+        <div className="course-card advanced">
             <h2 className="card-title" ref={cardAvanzadoTitle} onClick={() => toggleClassAll(cardAvanzado, cardAvanzadoTitle)}>Nivel Avanzado</h2>
             <div className="card-container" ref={cardAvanzado}>
                     <div className="card-content-text">
@@ -222,7 +222,7 @@ return (<>
                             <li>Matemáticas financieras (interés simple y compuesto).</li>
                             <li>Programación lineal (optimización).</li>
                         </ul>
-                        <p className="card-price">
+                        <p className="card-price advanced">
                             Desde $35<span className="discount">$50</span>
                         </p>
                         </div>

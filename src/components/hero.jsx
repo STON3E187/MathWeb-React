@@ -4,12 +4,9 @@ export default function Hero(){
     return (
     <section className="hero-section">
         <div className="hero-text">
-            <h1>Su socio de desarrollo para el comercio digital</h1>
+            <h1>No Necesitas Memoria Necesitas Entender</h1>
             <p>
-            Como agencia de desarrollo, creamos soluciones escalables para empresas
-            minoristas. Ya sea un sistema de tiendas estable sin limitaciones, sitios
-            web de campaña emocionantes, o software de negocios individual para
-            procesos limpios.
+            Olvida la memorización. Aprende el porqué de las fórmulas, comprende cada paso detrás de una operación y desarrolla pensamiento estructurado y racional para dominar la lógica matemática.
             </p>
             <div className="buttons-container">
                 <ButtonLink href="#" color="negro" contenido="Cursos y Precios" />

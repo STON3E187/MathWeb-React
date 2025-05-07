@@ -1,40 +1,24 @@
+import { processList } from "../data/allData";
+
 export default function LearnProcess(){
     return (
         <>
             <section className="learn-proc">
                 <div className="learn-proc-container">
                     <div className="learn-proc-title">
-                        <h2>Te acompañamos de la idea a la implementación técnica</h2>
-                        <p>Nuestros servicios en detalle</p>
+                        <h2>Así Enseñamos Matemáticas:</h2>
+                        <p>Guiamos a los estudiantes para que desarrollen pensamiento estructurado, comprendan los conceptos y apliquen la lógica detrás de cada operación.</p>
                     </div>
                     <div className="list-proc-side">
                         <ul className="porc-list">
-
-                            <li>
-                                <h3>Definición de los requisitos</h3>
-                                <p>En cooperación con usted, su equipo y UI/UX-Responsible definimos todos los requisitos.</p>
-                            </li>
-
-                            <li>
-                                <h3>Definición de los requisitos</h3>
-                                <p>En cooperación con usted, su equipo y UI/UX-Responsible definimos todos los requisitos.</p>
-                            </li>
-
-                            <li>
-                                <h3>Definición de los requisitos</h3>
-                                <p>En cooperación con usted, su equipo y UI/UX-Responsible definimos todos los requisitos.</p>
-                            </li>
-
-                            <li>
-                                <h3>Definición de los requisitos</h3>
-                                <p>En cooperación con usted, su equipo y UI/UX-Responsible definimos todos los requisitos.</p>
-                            </li>
-
-                            <li>
-                                <h3>Definición de los requisitos</h3>
-                                <p>En cooperación con usted, su equipo y UI/UX-Responsible definimos todos los requisitos.</p>
-                            </li>
-                            
+                            {processList.map(function(listIndex ,index){
+                                return (
+                                    <li key={index}>
+                                        <h3>{listIndex.title}</h3>
+                                        <p>{listIndex.paragraph}</p>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </div>
                 </div>

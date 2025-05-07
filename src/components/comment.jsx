@@ -5,7 +5,6 @@ import { commentsContent } from '../data/allData';
 export default function Comment() {
   const [actIndex, setActIndex] = useState(0);
 
-  // Corrección: Las funciones estaban invertidas (before/after)
   const showNext = () => {
     setActIndex((prev) => 
       prev + 2 >= commentsContent.length ? 0 : prev + 2
