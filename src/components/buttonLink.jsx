@@ -1,11 +1,11 @@
 export default function ButtonLink({
     href ="",
     color="",
-    contenido=""
+    content=""
 }){
     return(
         <a href={href} className={`button ${color}`}>
-            {contenido}
+            {content}
         </a>
     );
 }

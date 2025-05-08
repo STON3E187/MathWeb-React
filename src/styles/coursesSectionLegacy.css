@@ -1,0 +1,224 @@
+/*****************Course Section*****************/
+
+/*Course Header*/
+.course{
+    max-width: 1280px;
+  }
+  .course-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .course-header h2{
+    color: var(--azul-oscuro);
+    font-size: 3rem;
+  }
+  .course-header p{
+    font-size: 1.5rem;
+  }
+  
+  /*****************Course Cards*****************/
+  .course-cards{
+    display: flex;
+  }
+  .course-card{
+    display: flex;
+    transition: all 0.3s var(--animacion);
+  }
+  .card-title{
+    display: flex;
+    cursor: pointer;
+    height: fit-content;
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    border:solid var(--negro) 4px;
+    border-radius:2rem;
+    min-height: 500px;
+  }
+  .card-title:hover, .card-title:focus{
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  /*Interactividad del las cartas*/
+  .card-title.activate{
+    border:solid var(--negro) 4px;
+    border-left: 0;
+    border-radius: 0 2rem 2rem 0 ;
+  }
+  
+  .card-container.activate{
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0 2rem 2rem 2rem;
+  }
+  
+  
+  .card-container{
+    display: none;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border-radius: 2rem;
+    border:solid var(--negro) 4px;
+  }
+  .card-container h2{
+    font-size: 2rem;
+  }
+  .card-content-text{
+    display: flex;
+    gap: 1rem;
+  }
+  .card-content{
+    display: flex;
+    flex-direction:column;
+    gap: 0.5rem;
+    max-width: 400px;
+  }
+  .content-list > li{
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+  
+  /**********Course cards Colors*********/
+  
+  /*beginner*/
+  
+  
+  .course-card.beginner .card-title{
+    border:solid var(--beginner-color) 4px;
+    background-color: transparent;
+    color: var(--beginner-color);
+  }
+  .course-card.beginner .card-title:hover,.course-card.beginner .card-title:focus{
+    background-color: var(--beginner-color);
+    color: var(--blanco);
+  }
+  .course-card.beginner .card-title.activate{
+    background-color: var(--beginner-color);
+    color: var(--blanco);
+    border:solid var(--beginner-color) 4px;
+    border-left: 0;
+    border-radius: 0 2rem 2rem 0 ;
+  }
+  .course-card.beginner .card-container.activate{
+    border:solid var(--beginner-color) 4px;
+  }
+  
+  .course-card.beginner .card-container.activate > button{
+    border: solid var(--beginner-color) 4px;
+  }
+  
+  .course-card.beginner .card-container.activate .card-buttons > .button{
+    border:solid var(--beginner-color) 4px;
+    background: linear-gradient(to left,transparent 50%,var(--beginner-color) 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    color: var(--beginner-color);
+  }
+  
+  .course-card.beginner .card-container.activate .card-buttons > .button:hover, .course-card.beginner .card-container.activate .card-buttons > .button:focus{
+    background-position:left bottom;
+    color: var(--blanco);
+  }
+  
+  .card-price.beginner{
+    color: var(--beginner-color);
+  }
+  
+  /*intermediate*/
+  
+  
+  .course-card.intermediate .card-title{
+    border:solid var(--intermediate-color) 4px;
+    background-color: transparent;
+    color: var(--intermediate-color);
+  }
+  .course-card.intermediate .card-title:hover,.course-card.intermediate .card-title:focus{
+    background-color: var(--intermediate-color);
+    color: var(--blanco);
+  }
+  .course-card.intermediate .card-title.activate{
+    background-color: var(--intermediate-color);
+    color: var(--blanco);
+    border:solid var(--intermediate-color) 4px;
+    border-left: 0;
+    border-radius: 0 2rem 2rem 0 ;
+  }
+  .course-card.intermediate .card-container.activate{
+    border:solid var(--intermediate-color) 4px;
+  }
+  
+  .course-card.intermediate .card-container.activate > button{
+    border: solid var(--intermediate-color) 4px;
+  }
+  
+  .course-card.intermediate .card-container.activate .card-buttons > .button{
+    border:solid var(--intermediate-color) 4px;
+    background: linear-gradient(to left,transparent 50%,var(--intermediate-color) 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    color: var(--intermediate-color);
+  }
+  
+  .course-card.intermediate .card-container.activate .card-buttons > .button:hover, .course-card.intermediate .card-container.activate .card-buttons > .button:focus{
+    background-position:left bottom;
+    color: var(--blanco);
+  }
+  
+  .card-price.intermediate{
+    color: var(--intermediate-color);
+  }
+  
+  
+  /*advanced*/
+  
+  
+  .course-card.advanced .card-title{
+    border:solid var(--advanced-color) 4px;
+    background-color: transparent;
+    color: var(--advanced-color);
+  }
+  .course-card.advanced .card-title:hover,.course-card.advanced .card-title:focus{
+    background-color: var(--advanced-color);
+    color: var(--blanco);
+  }
+  .course-card.advanced .card-title.activate{
+    background-color: var(--advanced-color);
+    color: var(--blanco);
+    border:solid var(--advanced-color) 4px;
+    border-left: 0;
+    border-radius: 0 2rem 2rem 0 ;
+  }
+  .course-card.advanced .card-container.activate{
+    border:solid var(--advanced-color) 4px;
+  }
+  
+  .course-card.advanced .card-container.activate > button{
+    border: solid var(--advanced-color) 4px;
+  }
+  
+  .course-card.advanced .card-container.activate .card-buttons > .button{
+    border:solid var(--advanced-color) 4px;
+    background: linear-gradient(to left,transparent 50%,var(--advanced-color) 50%);
+    background-size: 300% 100%;
+    background-position: right bottom;
+    color: var(--advanced-color);
+  }
+  
+  .course-card.advanced .card-container.activate .card-buttons > .button:hover, .course-card.advanced .card-container.activate .card-buttons > .button:focus{
+    background-position:left bottom;
+    color: var(--blanco);
+  }
+  .card-price.advanced{
+    color: var(--advanced-color);
+  }
+  
+  /*************************/
+  

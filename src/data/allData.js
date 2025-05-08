@@ -1,122 +1,116 @@
 export const coursesData = [
     {
-      level: "beginner",
-      title: "Nivel Principiante",
-      price: 10,
-      originalPrice: 15,
-      resources: [
+      "price": 10,
+      "originalPrice": 15,
+      "resources": [
         {
-          type: "Videos",
-          items: [
-            "Operaciones básicas: 'Suma y resta con ejemplos cotidianos' (6 min)",
-            "Fracciones: 'Mitades y cuartos usando chocolate' (5 min)",
-            "Geometría: 'Área y perímetro con LEGO' (7 min)"
+          "type": "Videos",
+          "items": [
+            "Operaciones básicas: Suma y resta con ejemplos cotidianos (6 min).",
+            "Fracciones: Mitades y cuartos usando chocolate (5 min).",
+            "Geometría: Área y perímetro con LEGO (7 min)."
           ]
         },
         {
-          type: "Interactivos",
-          items: [
-            "Juego de memoria con tablas de multiplicar",
-            "App 'Number Run' para practicar cálculo mental"
+          "type": "Interactivos",
+          "items": [
+            "Juego de memoria con tablas de multiplicar.",
+            "App Number Run para practicar cálculo mental."
           ]
         },
         {
-          type: "Material descargable",
-          items: [
-            "Fichas de problemas con temática de supermercado (PDF)",
-            "Plantillas para recortar figuras geométricas"
+          "type": "Material descargable",
+          "items": [
+            "Fichas de problemas con temática de supermercado (PDF).",
+            "Plantillas para recortar figuras geométricas."
           ]
         }
       ],
-      content: [
-        "Números naturales, enteros y sus operaciones (suma, resta, multiplicación, división)",
-        "Fracciones básicas y decimales (comparación, suma, resta)",
-        "Figuras geométricas planas (círculo, triángulo, cuadrado) y sus propiedades",
-        "Cálculo de perímetros y áreas simples",
-        "Unidades de medida (longitud, peso, capacidad, tiempo)",
-        "Resolución de problemas con dinero y situaciones cotidianas",
-        "Introducción a la estadística básica (gráficas de barras)"
+      "content": [
+        "Números naturales, enteros y sus operaciones (suma, resta, multiplicación, división).",
+        "Fracciones básicas y decimales (comparación, suma, resta).",
+        "Figuras geométricas planas (círculo, triángulo, cuadrado) y sus propiedades.",
+        "Cálculo de perímetros y áreas simples.",
+        "Unidades de medida (longitud, peso, capacidad, tiempo).",
+        "Resolución de problemas con dinero y situaciones cotidianas.",
+        "Introducción a la estadística básica (gráficas de barras)."
       ]
     },
     {
-      level: "intermediate",
-      title: "Nivel Intermedio",
-      price: 20,
-      originalPrice: 30,
-      resources: [
+      "price": 20,
+      "originalPrice": 30,
+      "resources": [
         {
-          type: "Videos",
-          items: [
-            "Álgebra: 'Ecuaciones usando balanzas virtuales' (8 min)",
-            "Geometría: 'Pitágoras en la arquitectura' (10 min)",
-            "Estadística: 'Gráficas con datos de TikTok' (9 min)"
+          "type": "Videos",
+          "items": [
+            "Álgebra: Ecuaciones usando balanzas virtuales (8 min).",
+            "Geometría: Pitágoras en la arquitectura (10 min).",
+            "Estadística: Gráficas con datos de TikTok (9 min)."
           ]
         },
         {
-          type: "Herramientas digitales",
-          items: [
-            "Simulador de ecuaciones en GeoGebra",
-            "Generador automático de problemas en Wordwall"
+          "type": "Herramientas digitales",
+          "items": [
+            "Simulador de ecuaciones en GeoGebra.",
+            "Generador automático de problemas en Wordwall."
           ]
         },
         {
-          type: "Proyectos prácticos",
-          items: [
-            "Medir el aula y calcular volúmenes",
-            "Encuesta sobre redes sociales y gráfica de resultados"
+          "type": "Proyectos prácticos",
+          "items": [
+            "Medir el aula y calcular volúmenes.",
+            "Encuesta sobre redes sociales y gráfica de resultados."
           ]
         }
       ],
-      content: [
-        "Operaciones con números racionales y potencias",
-        "Álgebra: ecuaciones de primer y segundo grado, sistemas de ecuaciones",
-        "Geometría: teorema de Pitágoras, ángulos, polígonos, circunferencia",
-        "Proporcionalidad y porcentajes",
-        "Funciones lineales y gráficas",
-        "Probabilidad básica y estadística (media, moda, mediana)",
-        "Introducción a la trigonometría (seno, coseno, tangente)"
+      "content": [
+        "Operaciones con números racionales y potencias.",
+        "Álgebra: ecuaciones de primer y segundo grado, sistemas de ecuaciones.",
+        "Geometría: teorema de Pitágoras, ángulos, polígonos, circunferencia.",
+        "Proporcionalidad y porcentajes.",
+        "Funciones lineales y gráficas.",
+        "Probabilidad básica y estadística (media, moda, mediana).",
+        "Introducción a la trigonometría (seno, coseno, tangente)."
       ]
     },
     {
-      level: "advanced",
-      title: "Nivel Avanzado",
-      price: 35,
-      originalPrice: 50,
-      resources: [
+      "price": 35,
+      "originalPrice": 50,
+      "resources": [
         {
-          type: "Videos",
-          items: [
-            "Cálculo: 'Derivadas en movimiento' (12 min)",
-            "Matemáticas financieras: 'Intereses compuestos' (14 min)",
-            "Programación lineal: 'Optimizando rutas de delivery' (15 min)"
+          "type": "Videos",
+          "items": [
+            "Cálculo: Derivadas en movimiento (12 min).",
+            "Matemáticas financieras: Intereses compuestos (14 min).",
+            "Programación lineal: Optimizando rutas de delivery (15 min)."
           ]
         },
         {
-          type: "Recursos avanzados",
-          items: [
-            "Calculadora gráfica Desmos con tutorial integrado",
-            "Casos de estudio con hojas de cálculo (Google Sheets)"
+          "type": "Recursos avanzados",
+          "items": [
+            "Calculadora gráfica Desmos con tutorial integrado.",
+            "Casos de estudio con hojas de cálculo (Google Sheets)."
           ]
         },
         {
-          type: "Actividades",
-          items: [
-            "Analizar préstamos bancarios reales",
-            "Optimizar presupuestos familiares"
+          "type": "Actividades",
+          "items": [
+            "Analizar préstamos bancarios reales.",
+            "Optimizar presupuestos familiares."
           ]
         }
       ],
-      content: [
-        "Álgebra avanzada: polinomios, factorización, números complejos",
-        "Geometría analítica (rectas, parábolas, circunferencias)",
-        "Funciones exponenciales y logarítmicas",
-        "Cálculo diferencial e integral (límites, derivadas, integrales)",
-        "Probabilidad y distribuciones (binomial, normal)",
-        "Matemáticas financieras (interés simple y compuesto)",
-        "Programación lineal (optimización)"
+      "content": [
+        "Álgebra avanzada: polinomios, factorización, números complejos.",
+        "Geometría analítica (rectas, parábolas, circunferencias).",
+        "Funciones exponenciales y logarítmicas.",
+        "Cálculo diferencial e integral (límites, derivadas, integrales).",
+        "Probabilidad y distribuciones (binomial, normal).",
+        "Matemáticas financieras (interés simple y compuesto).",
+        "Programación lineal (optimización)."
       ]
     }
-  ];
+];
 
 export const processList = [
     {
