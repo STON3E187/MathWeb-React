@@ -199,7 +199,7 @@ export const packList = [
         ],
         "price" : "Desde $60",
         "discount" : null,
-        "saveOff" : null
+        "saveOff" : "Ahorra $35"
     },
     {
         "title": "Camino a la (Universidad)",
@@ -209,19 +209,19 @@ export const packList = [
         ],
         "price" : "Desde $45",
         "discount" : null,
-        "saveOff" : null
+        "saveOff" : "Ahorra $35"
     },
     {
         "title": "Aprendizaje Continuo++",
         "list" : [
-            "Nivel Intermedio + Avanzado.",
+            "Nivel Principiante + Intermedio.",
             "Guía de apoyo para padres (PDF).",
             "1 sesión grupal familiar (dudas generales).",
             "6 sesiones grupales (3 por nivel)."
         ],
         "price" : "Desde $25",
         "discount" : null,
-        "saveOff" : null
+        "saveOff" : "Ahorra $20"
     },
     {
         "title": "Institucional / Intermedio",

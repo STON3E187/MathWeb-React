@@ -7,6 +7,7 @@ export default function SpecialPacks(){
         <>
             <section className="packs">
                 <h2 className="packs-header">Paquetes<span>Especiales</span></h2>
+                
 
                 {packList.map(function(pack ,index){
                     return (

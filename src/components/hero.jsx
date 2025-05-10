@@ -1,6 +1,16 @@
 import ButtonLink from "./buttonLink";
 
 export default function Hero(){
+
+
+    // const textFrames = [
+    //     [{text : "No", color : "red"}, {text : "Necesitas", color: "red"}, {text: "+ Memoria", color : "red"}],
+    //     [{text : "No", color : "red"}, {text : "Necesitas", color: "blue"}, {text: "+ Memoria", color : "red"}],
+    //     [{text : "No", color : "red"}, {text : "Necesitas", color: "blue"}, {text: "+ Memoria", color : "red"}],
+    //     [{text : "No + Memoria", color : "red"}, {text : "Necesitas", color: "blue"}],
+    //     [{text : "No + Memoria", color : "red"}, {text : "Necesitas Entender +", color: "blue"}],
+    // ];
+
     return (
     <section className="hero-section">
         <div className="hero-text">
@@ -13,8 +23,6 @@ export default function Hero(){
                 <ButtonLink href="#" color="hero-button" content="Contactos" />
             </div>
         </div>
-        {/*Aqui abajo ira la animacion*/}
-        <div />
     </section>
-    )
+    );
 }

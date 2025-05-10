@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { coursesData } from "../data/allData"
+import { coursesData } from "../data/allData";
 import "../styles/coursesSection.css";
 import ButtonLink from "./buttonLink";
 
@@ -18,7 +18,7 @@ export default function Courses(){
     function changeLevel(level){
         setCourseLevel(level);
     }
-
+    
     return(
         <section className="course">
 
@@ -38,8 +38,7 @@ export default function Courses(){
 
                 <div className={`cards-wrap ${courseLevel}`}>
                     {course && (
-                        <div className={`cards-container ${courseLevel}`}>
-
+                        <div className={`cards-container ${courseLevel}`} >
                             <div className="card-text">
                                 <div className="card-content">
                                     <h2>Recursos</h2>

@@ -58,8 +58,8 @@
     display: flex;
 }
 .cards-container{
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 100%;
     padding: 2rem;
     border-radius: 2rem;
