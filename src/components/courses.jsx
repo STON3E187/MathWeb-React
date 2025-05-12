@@ -31,7 +31,7 @@ export default function Courses(){
                 </div>
 
                 <div className="cards-buttons">
-                    <button className={`card-button beginner ${courseLevel === "beginner" ? "activate" : ""}`} beginner onClick={() => {changeLevel("beginner")}}>Nivel Principiante</button>
+                    <button className={`card-button beginner ${courseLevel === "beginner" ? "activate" : ""}`} onClick={() => {changeLevel("beginner")}}>Nivel Principiante</button>
                     <button className={`card-button intermediate ${courseLevel === "intermediate" ? "activate" : ""}`} onClick={() => {changeLevel("intermediate")}}>Nivel Intermedio</button>
                     <button className={`card-button advance ${courseLevel === "advance" ? "activate" : ""}`} onClick={() => {changeLevel("advance")}}>Nivel Avanzado</button>
                 </div>
