@@ -1,28 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import { coursesData } from "../data/allData";
 import "../styles/coursesSection.css";
 import ButtonLink from "./buttonLink";
+import { animate, createScope } from "animejs";
 
 export default function Courses(){
 
     const [courseLevel, setCourseLevel] = useState(null);
-
     const levels = {
         "beginner" : 0,
         "intermediate" : 1,
         "advance" : 2
     }
-
     const course = courseLevel !== null ? coursesData[levels[courseLevel]] : null;
 
     function changeLevel(level){
         setCourseLevel(level);
     }
-    
-    return(
-        <section className="course">
 
-            <div className="course-wrap">
+    // Animacion para cuando la seccion entre en pantalla
+    const scope = useRef(null);
+    const [containerRef, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
+
+    useEffect(() => {
+        // Si entra en vision activa la animacion
+        if (inView === true){
+            scope.current = createScope().add(()=>{
+            animate(".course", {
+                y: ['4rem', '0rem'],
+                opacity: 1,
+                easing: "inOutCubic",
+                duration: 500,
+            })
+        });}
+
+    // limpieza de la animacion
+    return () => {
+        if (scope.current) scope.current.revert();
+    };
+
+    },[inView])
+
+    return(
+        <section className="course" ref={containerRef}>
                 <div className="course-header">
                     <h2>Aprende lo que necesitas, entiende lo que haces</h2>
                     <p>
@@ -83,7 +107,7 @@ export default function Courses(){
                         </div>
                     )}
                 </div>
-            </div>
+            
 
         </section>
     );

@@ -1,72 +1,73 @@
 import { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import { animate, createScope, createTimeline } from "animejs";
 import ButtonLink from "./buttonLink";
 
 export default function Hero(){
-
-    const containerRef = useRef(null);
+    
+    // Animacion para cuando la seccion entre en pantalla
     const scope = useRef(null);
-
-
-
+    const [containerRef, inView] = useInView({
+        threshold: 0.1,
+        triggerOnce: true
+    });
+    
     useEffect(() => {
-  scope.current = createScope({ containerRef }).add(() => {
+    if(inView === true){scope.current = createScope().add(() => {
 
-    // Esta es la declaracion de la animacion para no repetir codigo
-    const openAnimation = {
-            y: ['4rem', '0rem'],
-            opacity: 1,
-            easing: 'inOutCubic',
-            duration: 500
+        // Esta es la declaracion de la animacion para no repetir codigo
+        const openAnimation = {
+                y: ['4rem', '0rem'],
+                opacity: 1,
+                easing: "inOutCubic",
+                duration: 500
+        };
+
+        // Animaciones
+        animate(".title-animation, .hero-section", openAnimation);
+        animate(".hero-paragraph, .buttons-container", {
+            ...openAnimation,
+            delay: 2400
+        });
+
+        // Secuencia de animaciones del hero text
+        const tl = createTimeline({ 
+            defaults: { duration: 500 },
+        });
+    tl.add(
+            ".firstStep",
+            {
+                y: { to: "6rem", ease: "inOutCubic" },
+                color: ["#E34456", "#434AAA"],
+                ease: "inOutCubic"
+            },
+            1500
+            )
+            .add(
+            ".thirdStep",
+            {
+                x: { to: "-30rem", ease: "inOutCubic" },
+                ease: "inOutCubic"
+            },
+            "<"
+            )
+            .add(
+            ".fourStep",
+            {
+                opacity: 1,
+                ease: "inOutCubic"
+            },
+            "<<"
+            );
+        // ++++++++++++++++++++++++++++++++++++ 
+    });}
+
+    // limpieza de la animacion
+    return () => {
+        if (scope.current) scope.current.revert();
     };
 
-    // Animaciones
-    animate(".title-animation", openAnimation);
-    animate(".hero-paragraph, .buttons-container", {
-        ...openAnimation,
-        delay: 3400
-    });
-
-
-
-
-    // Secuencia de animaciones del hero text
-    const tl = createTimeline({ 
-        defaults: { duration: 1000 },
-     });
-   tl.add(
-        ".firstStep",
-        {
-            y: { to: "6rem", ease: "inOutCubic" },
-            color: ["#E34456", "#434AAA"],
-            ease: "inOutCubic"
-        },
-        1500
-        )
-        .add(
-        ".thirdStep",
-        {
-            x: { to: "-30rem", ease: "inOutCubic" },
-            ease: "inOutCubic"
-        },
-        "<"
-        )
-        .add(
-        ".fourStep",
-        {
-            opacity: 1,
-            ease: "inOutCubic"
-        },
-        "<<"
-        );
-    // ++++++++++++++++++++++++++++++++++++
-
-
-    
-  });
-
-  return () => scope.current.revert();
-}, []);
+}, [inView]);
 
 
     return (

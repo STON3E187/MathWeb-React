@@ -107,8 +107,9 @@ h3{
 section{
   display: block;
   position: relative;
-  padding: 7rem 3rem;
   margin: 0 auto;
+  padding: 6.5rem 0;
+  opacity: 0;
 }
 /*****************Buttons*****************/
 .button{
@@ -205,7 +206,7 @@ section{
 /*****************Hero Section*****************/
 .hero-section{
   max-width: 1280px;
-  padding-top: 9rem;
+  padding-top: 7rem;
   display:flex;
   justify-content: center;
   text-align: center;
@@ -277,10 +278,6 @@ section{
 /*****************Process Section*****************/
 .learn-proc{
   max-width: 1280px;
-  padding-left: 0;
-  padding-right: 0;
-}
-.learn-proc-container{
   display: grid;
   gap:2rem;
   grid-template-columns: 1.125fr 1fr;
@@ -374,7 +371,6 @@ border-radius: 2rem;
   align-items: baseline;
   flex-wrap: wrap;
   gap: 1rem;
-  padding-top: 1rem;
 }
 
 .packs-header{

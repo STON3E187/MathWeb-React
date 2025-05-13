@@ -1,3 +1,4 @@
+// Secciones
 import Courses from "./components/courses";
 import Header from "./components/header";
 import Hero from "./components/hero";
