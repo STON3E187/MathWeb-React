@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState,useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { animate, createScope } from "animejs";
 import ArrowLogo from "../assets/arrow-logo";
 import { commentsContent } from '../data/allData';
 
@@ -19,8 +21,34 @@ export default function Comment() {
 
   const commentsVisible = commentsContent.slice(actIndex, actIndex + 2);
 
+
+      // Animacion para cuando la seccion entre en pantalla
+      const scope = useRef(null);
+      const [containerRef, inView] = useInView({
+          threshold: 0.5,
+          triggerOnce: true
+      });
+  
+      useEffect(() => {
+          // Si entra en vision activa la animacion
+          if (inView === true){
+              scope.current = createScope().add(()=>{
+              animate(".comments", {
+                  y: ['4rem', '0rem'],
+                  opacity: 1,
+                  easing: "inOutCubic",
+                  duration: 700,
+              })
+          });}
+  
+      // limpieza de la animacion
+      return () => {
+          if (scope.current) scope.current.revert();
+      };
+  
+      },[inView])
   return (
-    <section className="comments">
+    <section className="comments" ref={containerRef}>
       <h2>Qué dicen nuestros estudiantes</h2>
 
       <div className="comment-container">
