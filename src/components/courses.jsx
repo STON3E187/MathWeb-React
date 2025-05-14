@@ -3,18 +3,21 @@ import { useInView } from "react-intersection-observer";
 import { coursesData } from "../data/allData";
 import "../styles/coursesSection.css";
 import ButtonLink from "./buttonLink";
-import { animate, createScope } from "animejs";
+import { animate, createScope, stagger } from "animejs";
 
 export default function Courses(){
 
     const [courseLevel, setCourseLevel] = useState(null);
+
     const levels = {
         "beginner" : 0,
         "intermediate" : 1,
         "advance" : 2
     }
+
     const course = courseLevel !== null ? coursesData[levels[courseLevel]] : null;
 
+    // Funcion que recive el Onclick dependiendo de su nivel de dificultad
     function changeLevel(level){
         setCourseLevel(level);
     }
@@ -36,6 +39,15 @@ export default function Courses(){
                 easing: "inOutCubic",
                 duration: 500,
             })
+
+            // Efecto cascada de los packs
+            animate(".card-button", {
+                y: ['5rem', '0rem'],
+                opacity: [0, 1],
+                easing: "inOutCubic",
+                delay: stagger(200),
+                duration: stagger(200, { start: 600 })
+            });
         });}
 
     // limpieza de la animacion
