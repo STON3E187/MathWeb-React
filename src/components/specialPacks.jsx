@@ -2,7 +2,8 @@ import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { animate, createScope } from "animejs";
 import { packList } from "../data/allData";
-
+// Packs Styles
+import "../styles/packsColors.css"
 export default function SpecialPacks(){
 
     // Animacion para cuando la seccion entre en pantalla
@@ -16,12 +17,12 @@ export default function SpecialPacks(){
         // Si entra en vision activa la animacion
         if (inView === true){
             scope.current = createScope().add(()=>{
-            animate(".packs", {
-                y: ['4rem', '0rem'],
-                opacity: 1,
-                easing: "inOutCubic",
-                duration: 400,
-            })
+                    animate(".packs", {
+                        y: ['4rem', '0rem'],
+                        opacity: 1,
+                        easing: "inOutCubic",
+                        duration: 400,
+                    })
         });}
 
     // limpieza de la animacion
@@ -33,10 +34,8 @@ export default function SpecialPacks(){
 
     return (
         <>
-            <section className="packs" ref={containerRef}>
+            <section className="packs" ref={ containerRef }>
                 <h2 className="packs-header">Paquetes<span>Especiales</span></h2>
-                
-
                 {packList.map(function(pack ,index){
                     return (
                         <div key={index} className="pack-card">

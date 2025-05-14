@@ -9,7 +9,7 @@ export default function LearnProcess(){
 // Animacion para cuando la seccion entre en pantalla
     const scope = useRef(null);
     const [containerRef, inView] = useInView({
-        threshold: 0.5,
+        threshold: 0.2,
         triggerOnce: true
     });
 
@@ -35,22 +35,23 @@ export default function LearnProcess(){
     return (
         <>
             <section className="learn-proc" ref={containerRef}>
+                <div className="learn-wrap">
                     <div className="learn-proc-title">
                         <h2>Así Enseñamos Matemáticas:</h2>
                         <p>Guiamos a los estudiantes para que desarrollen pensamiento estructurado, comprendan los conceptos y apliquen la lógica detrás de cada operación.</p>
                     </div>
-                    <div className="list-proc-side">
-                        <ul className="porc-list">
-                            {processList.map(function(listIndex ,index){
-                                return (
-                                    <li key={index}>
-                                        <h3>{listIndex.title}</h3>
-                                        <p>{listIndex.paragraph}</p>
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                    </div>
+                    <ul className="proc-list">
+                        {processList.map(function(listIndex ,index){
+                            return (
+                                <li key={index}>
+                                    <h3>{listIndex.title}</h3>
+                                    <p>{listIndex.paragraph}</p>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
             </section>
         </>
     );

@@ -11,8 +11,11 @@
   --magenta:#C7286C;
   --naranja:#EC885A;
   --amarillo:#FFDD7B;
+  --verde:#2E7960;
 
   /*Section colors*/
+  --backgroud:var(--blanco);
+
   --nav-background:var(--rojo);
   --nav-font-color:var(--blanco);
 
@@ -27,6 +30,8 @@
 
   /*Animation*/
   --animacion:cubic-bezier(.11,.79,.1,1);
+
+  /* Packs Colors */
 
 }
 
@@ -278,12 +283,15 @@ section{
 /*****************Process Section*****************/
 .learn-proc{
   max-width: 1280px;
+}
+.learn-wrap{
   display: grid;
   gap:2rem;
   grid-template-columns: 1.125fr 1fr;
   grid-template-rows: 1fr;
   align-items: start;
   width: 100%;
+
 }
 .learn-proc-title{
   display: flex;
@@ -301,14 +309,14 @@ section{
   text-wrap: balance;
   font-size: 1.5rem;
 }
-.porc-list > li > h3{
+.proc-list > li > h3{
   font-size: 2rem;
 }
-.porc-list > li{
+.proc-list > li{
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  padding: 2rem 0 2rem 0;
+  margin-bottom: 4rem;
   font-size: 1.5rem;
 }
 
@@ -374,13 +382,17 @@ border-radius: 2rem;
 }
 
 .packs-header{
+  color: var(--azul-oscuro);
   align-self: center;
+  text-align: center;
   padding: 1.5rem;
+  font-size: 4rem;
+  order: 2;
 }
 
 .packs-header h2,.packs-header span{
   display: block;
-  font-size: 3rem;
+  font-size: inherit;
 }
 .pack-container{
   width:800px ;
@@ -395,8 +407,10 @@ border-radius: 2rem;
   width: auto;
   gap:0.5rem;
   padding: 1rem;
-  border:solid var(--negro) 4px;
   border-radius: 1.5rem;
+  color: var(--negro);
+  background-color: var(--backgroud);
+  border:solid var(--negro) 4px;
   transition: all 0.3s var(--animacion);
 }
 
