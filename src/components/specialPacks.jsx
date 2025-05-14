@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { animate, createScope } from "animejs";
+import { animate, createScope, stagger } from "animejs";
 import { packList } from "../data/allData";
 // Packs Styles
 import "../styles/packsColors.css"
@@ -22,7 +22,16 @@ export default function SpecialPacks(){
                         opacity: 1,
                         easing: "inOutCubic",
                         duration: 400,
-                    })
+                    });
+
+                    // Efecto cascada de los packs
+                    animate(".pack-card", {
+                        y: ['5rem', '0rem'],
+                        opacity: [0, 1],
+                        easing: "inOutCubic",
+                        delay: stagger(200),
+                        duration: stagger(200, { start: 600 })
+                    });
         });}
 
     // limpieza de la animacion
