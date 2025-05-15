@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { animate, createScope } from "animejs";
+import { animate, createScope, onScroll, utils } from "animejs";
 import { processList } from "../data/allData";
 
 export default function LearnProcess(){
@@ -8,29 +8,60 @@ export default function LearnProcess(){
 
 // Animacion para cuando la seccion entre en pantalla
     const scope = useRef(null);
-    const [containerRef, inView] = useInView({
+    const {ref: containerRef, inView: inViewOne} = useInView({
         threshold: 0.2,
         triggerOnce: true
     });
-
     useEffect(() => {
+
         // Si entra en vision activa la animacion
-        if (inView === true){
-            scope.current = createScope().add(()=>{
-            animate(".learn-proc", {
-                y: ['4rem', '0rem'],
-                opacity: 1,
-                easing: "inOutCubic",
-                duration: 500,
-            })
-        });}
+        if (inViewOne === true){
+                scope.current = createScope().add(()=>{
+                animate(".learn-proc", {
+                    y: ['4rem', '0rem'],
+                    opacity: 1,
+                    easing: "inOutCubic",
+                    duration: 500,
+                })
+
+                const listTitles = utils.$(".proc-list-title");
+
+                listTitles.forEach((item) =>{
+                    animate(item,{
+                        autoplay: onScroll({
+
+                            container: "body",
+                            enter: "60% top",
+                            leave: "40% bottom",
+                            // Cuando entra en el threshold
+                            onEnter: () => {
+                                animate(item, {
+                                    color: "#E34456",
+                                    duration: 300,
+                                    easing: "inOutCubic"
+                                });
+                            },
+                            // Cuando sale del threshold
+                            onLeave: () => {
+                                animate(item, {
+                                    color: "#200A2A",
+                                    duration: 300,
+                                    easing: "inOutCubic"
+                                });
+                            }
+                        })
+                    })
+                })
+
+            });
+        };
 
     // limpieza de la animacion
     return () => {
         if (scope.current) scope.current.revert();
     };
 
-    },[inView])
+    },[inViewOne])
 
     return (
         <>
@@ -44,14 +75,13 @@ export default function LearnProcess(){
                         {processList.map(function(listIndex ,index){
                             return (
                                 <li key={index}>
-                                    <h3>{listIndex.title}</h3>
+                                    <h3 className="proc-list-title">{listIndex.title}</h3>
                                     <p>{listIndex.paragraph}</p>
                                 </li>
                             )
                         })}
                     </ul>
                 </div>
-
             </section>
         </>
     );

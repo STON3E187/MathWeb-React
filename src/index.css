@@ -28,6 +28,7 @@
   --intermediate-color:var(--morado);
   --advance-color:var(--magenta);
 
+  --learn-title:var(--azul-oscuro);
   /*Animation*/
   --animacion:cubic-bezier(.11,.79,.1,1);
 
@@ -300,10 +301,10 @@ section{
   position: sticky;
   text-align: right;
   top: 35%;
-  margin-bottom: 2rem;
 }
 .learn-proc-title > h2{
-  line-height: 1.5;
+  line-height: 1.2;
+  color: var(--learn-title);
 }
 .learn-proc-title p{
   text-wrap: balance;
@@ -311,6 +312,7 @@ section{
 }
 .proc-list > li > h3{
   font-size: 2rem;
+  line-height: 1.8;
 }
 .proc-list > li{
   display: flex;
@@ -318,6 +320,9 @@ section{
   gap: 0.2rem;
   margin-bottom: 4rem;
   font-size: 1.5rem;
+}
+.proc-list > li:last-child{
+  margin-bottom: 0;
 }
 
 /*****************Middle title*****************/
