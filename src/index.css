@@ -499,7 +499,7 @@ line-height: 1.2;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border:solid var(--negro) 4px;
+  border:solid var(--rojo) 4px;
   font-weight: 600;
   font-size: 1.5rem;
   border-radius: 100%;
@@ -511,6 +511,9 @@ line-height: 1.2;
 .comment-button:first-child{
   transform: rotate(180deg);
 }
+.comment-button svg path{
+  fill: var(--rojo);
+}
 .comment-button:hover, .comment-button:focus,.comment-button:hover svg path, .comment-button:focus svg path{
   background-position:left bottom;
   fill: var(--blanco);
@@ -521,15 +524,15 @@ line-height: 1.2;
   --calc:calc(var(--border-radius-size) - var(--padding));
 
   width: 100%;
+  background-color: var(--rojo);
   max-width: 500px;
   flex: 0 0 auto;
-  border:solid var(--negro) 4px;
+  border:solid var(--rojo) 4px;
   border-radius:var(--calc);
   overflow: hidden;
 }
 
 .comment-head{
-  background-color: var(--rojo);
   color: var(--blanco);
   display: flex;
   gap:0.5rem;
@@ -540,6 +543,7 @@ line-height: 1.2;
   height: 100px;
   background-color: var(--blanco);
   border-radius: 10rem;
+  overflow: hidden;
 }
 .name{
   font-size: 2rem;

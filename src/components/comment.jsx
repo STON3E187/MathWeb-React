@@ -1,6 +1,6 @@
 import { useState,useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { animate, createScope } from "animejs";
+import { animate, createScope, stagger } from "animejs";
 import ArrowLogo from "../assets/arrow-logo";
 import { commentsContent } from '../data/allData';
 
@@ -8,15 +8,34 @@ export default function Comment() {
   const [actIndex, setActIndex] = useState(0);
 
   const showNext = () => {
+
     setActIndex((prev) => 
       prev + 2 >= commentsContent.length ? 0 : prev + 2
     );
+
+    animate(".comment-card", {
+      y: ['5rem', '0rem'],
+      opacity: [0, 1],
+      easing: "inOutCubic",
+      duration: stagger(200, { 
+        start: 400,
+        reversed: true
+        })
+    });
   };
 
   const showPrev = () => {
+
     setActIndex((prev) => 
       prev - 2 < 0 ? commentsContent.length - 2 : prev - 2
     );
+
+    animate(".comment-card", {
+        y: ['5rem', '0rem'],
+        opacity: [0, 1],
+        easing: "inOutCubic",
+        duration: stagger(200, { start: 400 })
+    });
   };
 
   const commentsVisible = commentsContent.slice(actIndex, actIndex + 2);
@@ -39,6 +58,15 @@ export default function Comment() {
                   easing: "inOutCubic",
                   duration: 700,
               })
+
+              // Efecto cascada de los packs
+              animate(".comment-card", {
+                  y: ['5rem', '0rem'],
+                  opacity: [0, 1],
+                  easing: "inOutCubic",
+                  delay: stagger(200),
+                  duration: stagger(200, { start: 600 })
+              });
           });}
   
       // limpieza de la animacion
@@ -59,7 +87,7 @@ export default function Comment() {
             >
             <ArrowLogo />
         </button>
-            
+        
         {commentsVisible.map((comment, index) => (
           <div key={index} className="comment-card">
             <div className="comment-head">
