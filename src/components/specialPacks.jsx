@@ -29,8 +29,8 @@ export default function SpecialPacks(){
                         y: ['5rem', '0rem'],
                         opacity: [0, 1],
                         easing: "inOutCubic",
-                        delay: stagger(200),
-                        duration: stagger(200, { start: 600 })
+                        delay: stagger(100),
+                        duration: stagger(100, { start: 500 })
                     });
         });}
 
