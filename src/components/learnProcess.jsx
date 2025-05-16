@@ -29,10 +29,9 @@ export default function LearnProcess(){
                 listTitles.forEach((item) =>{
                     animate(item,{
                         autoplay: onScroll({
-
                             container: "body",
                             enter: "60% top",
-                            leave: "40% bottom",
+                            leave: "35% bottom",
                             // Cuando entra en el threshold
                             onEnter: () => {
                                 animate(item, {
