@@ -145,7 +145,7 @@ export const commentsContent = [
         "name": "María Fernanda",
         "subTitle": "Estudiante de 5to Año",
         "time": "Escrito hace 1 semana",
-        "comment": "No entendía casi nada de fracciones, pero este curso me aclaró muchas cosas.",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna. Duis sem nisi, porttitor a lacus quis, pharetra feugiat lacus.",
         "score": 4.8
     },
     {
@@ -153,7 +153,7 @@ export const commentsContent = [
         "name": "José Alejandro",
         "subTitle": "Estudiante de 4to Año",
         "time": "Escrito hace 3 días",
-        "comment": "El profe explica como si estuviera en mi cabeza, brutal.",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna.",
         "score": 5.0
     },
     {
@@ -161,7 +161,7 @@ export const commentsContent = [
         "name": "Luisana Gómez",
         "subTitle": "Estudiante de Bachillerato",
         "time": "Escrito hace 2 semanas",
-        "comment": "Al principio me abrumé, pero después todo encajó, excelente curso.",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna. Duis sem nisi, porttitor a lacus quis, pharetra feugiat lacus.",
         "score": 4.3
     },
     {
@@ -169,7 +169,7 @@ export const commentsContent = [
         "name": "Carlos Medina",
         "subTitle": "Estudiante de 6to Grado",
         "time": "Escrito hace 5 días",
-        "comment": "Pensé que era muy básico, pero en verdad aprendí full.",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna.",
         "score": 4.7
     },
     {
@@ -177,15 +177,15 @@ export const commentsContent = [
         "name": "Dayana Rodríguez",
         "subTitle": "Estudiante de Bachillerato",
         "time": "Escrito hace 1 mes",
-        "comment": "Me gusta porque es directo y sin tanta vuelta.",
-        "score": 4.6
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna. Duis sem nisi, porttitor a lacus quis, pharetra feugiat lacus.",
+        "score": 3.6
     },
     {
         "avatar": null,
         "name": "Andrés Paredes",
         "subTitle": "Estudiante de 3er Año",
         "time": "Escrito hace 4 semanas",
-        "comment": "Ta fino, pero a veces me pierdo. Igual lo recomiendo.",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod orci vel ipsum ullamcorper hendrerit vitae a magna. Duis sem nisi, porttitor a lacus quis, pharetra feugiat lacus.",
         "score": 4.2
     }
 ];

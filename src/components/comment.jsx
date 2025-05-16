@@ -1,6 +1,7 @@
 import { useState,useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { animate, createScope, stagger } from "animejs";
+import { Star } from "../assets/star";
 import ArrowLogo from "../assets/arrow-logo";
 import { commentsContent } from '../data/allData';
 
@@ -102,7 +103,11 @@ export default function Comment() {
               <p className="sentence">"{comment.comment}"</p>
               <div className="star-rate">
                 <span>{comment.score} / 5</span>
-                <div className="stars"></div>
+                <div className="stars">
+                  {Array.from({ length: Math.floor(comment.score) }, (_, i) => (
+                    <Star key={i} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

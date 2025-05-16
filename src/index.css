@@ -313,6 +313,7 @@ section{
 .proc-list > li > h3{
   font-size: 2rem;
   line-height: 1.8;
+  text-wrap: balance;
 }
 .proc-list > li{
   display: flex;
@@ -562,7 +563,16 @@ line-height: 1.2;
 }
 
 .star-rate{
+  display: flex;
+  justify-content: end;
+  gap:1rem;
   font-weight: bold;
+}
+.stars{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.5rem;
 }
 
 /*****************Footer*****************/
