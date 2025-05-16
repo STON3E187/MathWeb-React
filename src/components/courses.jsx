@@ -14,7 +14,7 @@ export default function Courses(){
         "intermediate" : 1,
         "advance" : 2
     }
-
+    
     const course = courseLevel !== null ? coursesData[levels[courseLevel]] : null;
 
     // Funcion que recive el Onclick dependiendo de su nivel de dificultad
@@ -51,7 +51,6 @@ export default function Courses(){
                 //Importante, limpia los estilos inline cuando termina la animacion (sin esto no realiza el hover)
                 onComplete: utils.cleanInlineStyles
             });
-
         });}
 
     // limpieza de la animacion
@@ -60,6 +59,23 @@ export default function Courses(){
     };
 
     },[inView])
+
+    // Efecto del ClipPath en los cursos
+  useEffect(() => {
+
+    // Origen de los ClipPath(Donde comienza el circulo)
+    const origins = {
+      beginner: "circle(0% at 15% -15%)",
+      intermediate: "circle(0% at 50% -15%)",
+      advance: "circle(0% at 85% -15%)"
+    };
+
+    animate(".cards-container", {
+      clipPath: [origins[courseLevel], "circle(100% at 50% 50%)"],
+      duration: 800,
+      easing: "easeInOutCubic",
+    });
+  }, [courseLevel]);
 
     return(
         <section className="course" ref={containerRef}>

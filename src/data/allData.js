@@ -141,51 +141,52 @@ export const processList = [
 
 export const commentsContent = [
     {
-        "avatar" : null,
-        "name" : "Prueba",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "María Fernanda",
+        "subTitle": "Estudiante de 5to Año",
+        "time": "Escrito hace 1 semana",
+        "comment": "No entendía casi nada de fracciones, pero este curso me aclaró muchas cosas.",
+        "score": 4.8
     },
     {
-        "name" : "Aaron J. Trujillo A.",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "José Alejandro",
+        "subTitle": "Estudiante de 4to Año",
+        "time": "Escrito hace 3 días",
+        "comment": "El profe explica como si estuviera en mi cabeza, brutal.",
+        "score": 5.0
     },
     {
-        "avatar" : null,
-        "name" : "Aaron J. Trujillo A.",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "Luisana Gómez",
+        "subTitle": "Estudiante de Bachillerato",
+        "time": "Escrito hace 2 semanas",
+        "comment": "Al principio me abrumé, pero después todo encajó, excelente curso.",
+        "score": 4.3
     },
     {
-        "avatar" : null,
-        "name" : "Aaron J. Trujillo A.",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "Carlos Medina",
+        "subTitle": "Estudiante de 6to Grado",
+        "time": "Escrito hace 5 días",
+        "comment": "Pensé que era muy básico, pero en verdad aprendí full.",
+        "score": 4.7
     },
     {
-        "avatar" : null,
-        "name" : "Aaron J. Trujillo A.",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "Dayana Rodríguez",
+        "subTitle": "Estudiante de Bachillerato",
+        "time": "Escrito hace 1 mes",
+        "comment": "Me gusta porque es directo y sin tanta vuelta.",
+        "score": 4.6
     },
     {
-        "avatar" : null,
-        "name" : "Aaron J. Trujillo A.",
-        "subTitle" : "Estudiante de Bachiderato",
-        "time" : "Escrito hace 2 semanas",
-        "comment" : "Al principio no entendia una mierda pero ahora, sigo sin entender, pero ta bueno el curso.",
-        "score" : 4.5
+        "avatar": null,
+        "name": "Andrés Paredes",
+        "subTitle": "Estudiante de 3er Año",
+        "time": "Escrito hace 4 semanas",
+        "comment": "Ta fino, pero a veces me pierdo. Igual lo recomiendo.",
+        "score": 4.2
     }
 ];
 

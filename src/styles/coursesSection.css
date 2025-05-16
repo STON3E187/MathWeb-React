@@ -48,8 +48,6 @@
 
 .card-button.activate{
     transform: translateY(1rem);
-    border-bottom: 0;
-    border-radius: 2rem 2rem 0 0;
   }
 /*Card Content*/
 .card-wrap{
