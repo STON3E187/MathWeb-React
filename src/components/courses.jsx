@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { coursesData } from "../data/allData";
 import "../styles/coursesSection.css";
 import ButtonLink from "./buttonLink";
-import { animate, createScope, stagger } from "animejs";
+import { animate, createScope, stagger, utils } from "animejs";
 
 export default function Courses(){
 
@@ -46,8 +46,12 @@ export default function Courses(){
                 opacity: [0, 1],
                 easing: "inOutCubic",
                 delay: stagger(200),
-                duration: stagger(200, { start: 600 })
+                duration: stagger(200, { start: 600 }),
+
+                //Importante, limpia los estilos inline cuando termina la animacion (sin esto no realiza el hover)
+                onComplete: utils.cleanInlineStyles
             });
+
         });}
 
     // limpieza de la animacion
