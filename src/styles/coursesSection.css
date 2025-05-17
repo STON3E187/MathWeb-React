@@ -15,6 +15,8 @@
 }
 .course-header p{
     font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 1080px;
 }
 
   /*Buttons*/
@@ -55,11 +57,17 @@
 }
 .cards-wrap{
     display: flex;
+    width: 100%;
+    height: 100%;
 }
 .cards-container{
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    max-height: 450;
+    gap: 1rem;
     width: 100%;
+    height:100%;
     padding: 2rem;
     border-radius: 2rem;
     color: var(--negro);
@@ -75,9 +83,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     background-color: inherit;
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
     z-index: -1;
 }
 .card-text{

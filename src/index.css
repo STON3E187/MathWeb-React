@@ -1,5 +1,10 @@
 :root{
-  --font-size:16px;
+  --font-size-tn:12px;
+  --font-size-sm:14px;
+  --font-size-md:16px;
+  --font-size-lg:18px;
+  --font-size-xl:20px;
+
   --fuente-primaria: "Fredoka", sans-serif;
 
   /*Colors*/
@@ -45,7 +50,7 @@
 }
 html{
   position: relative;
-  font-size: var(--font-size);
+  font-size: var(--font-size-md);
   font-family: var(--fuente-primaria);
   color:var(--negro);
 }
@@ -114,7 +119,7 @@ section{
   display: block;
   position: relative;
   margin: 0 auto;
-  padding: 6.5rem 1.5rem;
+  padding: 6.5rem 0;
   opacity: 0;
 }
 /*****************Buttons*****************/
@@ -263,6 +268,9 @@ section{
 .hero-text p{
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
 }
 .buttons-container{
   display: flex;
@@ -288,11 +296,10 @@ section{
 .learn-wrap{
   display: grid;
   gap:2rem;
-  grid-template-columns: 1.125fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   align-items: start;
   width: 100%;
-
 }
 .learn-proc-title{
   display: flex;
@@ -305,6 +312,7 @@ section{
 .learn-proc-title > h2{
   line-height: 1.2;
   color: var(--learn-title);
+  font-size: 2.5rem;
 }
 .learn-proc-title p{
   text-wrap: balance;
@@ -324,6 +332,9 @@ section{
 }
 .proc-list > li:last-child{
   margin-bottom: 0;
+}
+.proc-list > li > p{
+padding-right: 1rem;
 }
 
 /*****************Middle title*****************/
@@ -550,7 +561,7 @@ line-height: 1.2;
   font-size: 2rem;
 }
 .sub-title{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .text-comment{
   display: flex;
@@ -559,7 +570,7 @@ line-height: 1.2;
   color:var(--negro);
   background-color: var(--blanco);
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .star-rate{

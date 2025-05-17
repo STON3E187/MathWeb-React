@@ -1,7 +1,7 @@
 import Logo from "../assets/logo";
 import { headerLinks } from "../data/allData";
 
-export default function Header(){
+export default function HeaderResponsive(){
     return(
     <header className="header-container">
         <div className="header-menu">

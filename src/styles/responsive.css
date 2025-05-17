@@ -1,0 +1,24 @@
+@media (max-width: 1200px){
+    html{
+        font-size: var(--font-size-sm);
+    }
+
+    section{
+        --padding:2rem;
+
+        padding-left:var(--padding);
+        padding-right:var(--padding);
+    }
+
+    .card-content{
+        min-width: 400px;
+    }
+
+    .comment-card{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1000px){
+    
+}

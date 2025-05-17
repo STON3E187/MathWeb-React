@@ -1,3 +1,22 @@
+export const headerLinks = [
+  {
+    "title": "Inicio",
+    "link": "#"
+  },
+  {
+    "title": "Cursos y Precios",
+    "link": "#"
+  },
+  {
+    "title": "Recursos",
+    "link": "#"
+  },
+  {
+    "title": "Contacto",
+    "link": "#"
+  }
+]
+
 export const coursesData = [
     {
       "price": 10,
