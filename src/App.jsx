@@ -20,7 +20,8 @@ import "./styles/responsive.css"
 
 function App() {
 
-  const isMobile = useMediaQuery({ maxWidth: 1080 });
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
+  
   return (
     <>
     {isMobile ? <HeaderResponsive /> : <Header />}

@@ -5,6 +5,8 @@ import { Star } from "../assets/star";
 import ArrowLogo from "../assets/arrow-logo";
 import { commentsContent } from '../data/allData';
 
+import "../styles/commentSection.css"
+
 export default function Comment() {
   const [actIndex, setActIndex] = useState(0);
 

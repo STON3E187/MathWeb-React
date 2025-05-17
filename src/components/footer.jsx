@@ -1,6 +1,8 @@
 import Logo from "../assets/logo";
 import ArrowLogo from "../assets/arrow-logo";
 
+import "../styles/footer.css"
+
 export default function Footer(){
     return (
         <>

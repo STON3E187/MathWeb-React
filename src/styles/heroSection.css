@@ -1,0 +1,115 @@
+/*****************Hero Section*****************/
+.hero-section{
+  max-width: 1280px;
+  padding-top: 7rem;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}
+.hero-text{
+  width: 100%;
+}
+.title-animation{
+  display:grid;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: bold;
+  grid-template-columns:repeat(3, auto);
+  grid-template-rows: auto;
+  margin-bottom: 3.5rem;
+  grid-template-areas:
+  "second first third"
+  "none none four";
+  line-height: 1;
+  cursor:cell;
+}
+.title-animation > *{
+  display: inline-block;
+  width: max-content;
+}
+.firstStep{
+  grid-area:first; 
+}
+.secondStep{
+  grid-area:second; 
+}
+.thirdStep{
+  grid-area:third; 
+}
+.fourStep{
+  opacity: 0;
+  grid-area:four; 
+}
+/*Para la Animacion*/
+.red{
+  color: var(--hero-title);
+}
+.blue{
+  color:var(--hero-title-second);
+}
+/*******/
+
+.hero-text p{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+.buttons-container{
+  display: flex;
+  justify-content: center;
+  gap:0.5rem;
+}
+.hero-button{
+  background: linear-gradient(to left,transparent 50%,var(--hero-button) 50%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  border: solid var(--hero-button) 4px;
+  color: var(--hero-button);
+}
+
+.hero-button:hover, .hero-button:focus{
+  background-position:left bottom;
+}
+
+/* Responsive */
+@media (max-width: 1000px){
+
+    .title-animation{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .title-animation > *{
+        display: inline-block;
+        width: fit-content;
+        text-align: start;
+    }
+/*  */
+    .firstStep{
+        order: 1;
+    }
+
+    .secondStep{
+        opacity: 0;
+        order: 2;
+    }
+
+    .thirdStep{
+        order: 3;
+    }
+    .fourStep{
+        order: 4;
+    }
+/*  */
+
+    .hero-text p{
+        text-align: start;
+    }
+
+    .buttons-container{
+        justify-content: start;
+    }
+}

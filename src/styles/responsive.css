@@ -20,5 +20,13 @@
 }
 
 @media (max-width: 1000px){
-    
+    html{
+        font-size: var(--font-size-xl);
+    }
+
+    section{
+        --padding: 4rem;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
 }

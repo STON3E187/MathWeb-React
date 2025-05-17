@@ -3,6 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { animate, createScope, onScroll, utils } from "animejs";
 import { processList } from "../data/allData";
 
+import "../styles/learnSection.css"
+
 export default function LearnProcess(){
 
 

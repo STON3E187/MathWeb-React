@@ -200,3 +200,12 @@
     color: var(--blanco);
   }
 
+  @media (max-width: 1000px){
+    .course-header{
+      text-align: start;
+    }
+
+    .card-wrap{
+      padding: 0;
+    }
+}

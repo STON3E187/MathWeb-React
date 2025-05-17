@@ -1,0 +1,19 @@
+/*****************Buttons*****************/
+.button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  border:solid var(--negro) 4px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  background: linear-gradient(to left,transparent 50%,var(--negro) 50%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all .7s var(--animacion);
+}
+.button:hover, .button:focus{
+  background-position:left bottom;
+  color: var(--blanco);
+}

@@ -1,0 +1,72 @@
+/*****************Header*****************/
+.header-container{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 999;
+  font-size: 1.5rem;
+  background-color: var(--nav-background);
+  padding: 1rem 4rem;
+  border-bottom:solid var(--nav-font-color) 4px;
+  color:var(--nav-font-color);
+}
+
+.header-menu{
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.5rem;
+  font-size: 1.5rem;
+}
+.logo svg{
+  width: 3.5rem;
+  height: auto;
+}
+.logo svg path:first-child{
+  fill: transparent;
+}
+.logo svg path{
+  stroke: var(--nav-font-color);
+  fill: var(--nav-font-color);
+}
+
+.nav-menu-items{
+  display: flex;
+}
+.nav-menu-items li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+.nav-menu-items li a{
+  padding: 1rem;
+}
+
+/*Linea de Animcacion de Link*/
+.nav-menu-items li > a::after{
+  content: '';
+  position: relative;
+  display: block;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  bottom: 4px;
+  background-color: var(--nav-font-color);
+  border-radius: 2rem;
+  transition: all 0.1s ease;
+}
+.nav-menu-items li > a:hover::after, .nav-menu-items li > a:focus::after{
+  width: 100%;
+  transition: all 0.3s var(--animacion);
+}

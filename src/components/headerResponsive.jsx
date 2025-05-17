@@ -1,6 +1,8 @@
 import Logo from "../assets/logo";
 import { headerLinks } from "../data/allData";
 
+import "../styles/headerNav.css"
+
 export default function HeaderResponsive(){
     return(
     <header className="header-container">

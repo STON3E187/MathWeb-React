@@ -2,8 +2,10 @@ import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { animate, createScope, stagger } from "animejs";
 import { packList } from "../data/allData";
+
 // Packs Styles
-import "../styles/packsColors.css"
+import "../styles/packsSection.css"
+
 export default function SpecialPacks(){
 
     // Animacion para cuando la seccion entre en pantalla

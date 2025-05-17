@@ -1,0 +1,47 @@
+/*****************Process Section*****************/
+.learn-proc{
+  max-width: 1280px;
+}
+.learn-wrap{
+  display: grid;
+  gap:2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  align-items: start;
+  width: 100%;
+}
+.learn-proc-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  text-align: right;
+  top: 35%;
+}
+.learn-proc-title > h2{
+  line-height: 1.2;
+  color: var(--learn-title);
+  font-size: 2.5rem;
+}
+.learn-proc-title p{
+  text-wrap: balance;
+  font-size: 1.5rem;
+}
+.proc-list > li > h3{
+  font-size: 2rem;
+  line-height: 1.8;
+  text-wrap: balance;
+}
+.proc-list > li{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+}
+.proc-list > li:last-child{
+  margin-bottom: 0;
+}
+.proc-list > li > p{
+padding-right: 1rem;
+}
