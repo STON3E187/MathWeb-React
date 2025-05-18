@@ -45,3 +45,19 @@
 .proc-list > li > p{
 padding-right: 1rem;
 }
+
+@media (max-width: 1000px){
+  .learn-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .learn-proc-title{
+    position: relative;
+    text-align: start;
+  }
+
+  .proc-list > li{
+    margin-bottom: 2rem;
+  }
+}

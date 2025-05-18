@@ -202,10 +202,20 @@
     color: var(--blanco);
   }
 
+  @media (max-width: 1200px){
+
+    .card-content{
+        min-width: 400px;
+    }
+
+  }
+
   @media (max-width: 1000px){
+
     .course-header{
       text-align: start;
     }
+
     .card-wrap{
       padding: 0;
     }
@@ -215,6 +225,7 @@
     .cards-buttons{
       flex-direction: column;
     }
+
     .card-button.activate, .card-button:hover, .card-button:focus{
       transform: translateY(0);
     }
@@ -232,17 +243,21 @@
     .card-wrap{
       padding: 0;
     }
+
     .cards-container{
       max-width: 100%;
       width: 100%;
     }
+
     .card-text{
       display: flex;
       flex-direction: column;
       width: 100%;
       gap: 1.5rem;
     }
+
     .card-content{
       min-width: 100%;
     }
+    
 }

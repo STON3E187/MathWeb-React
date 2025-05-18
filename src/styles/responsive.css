@@ -9,14 +9,6 @@
         padding-left:var(--padding);
         padding-right:var(--padding);
     }
-
-    .card-content{
-        min-width: 400px;
-    }
-
-    .comment-card{
-        max-width: 400px;
-    }
 }
 
 @media (max-width: 1000px){

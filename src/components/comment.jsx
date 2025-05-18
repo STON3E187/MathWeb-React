@@ -4,11 +4,13 @@ import { animate, createScope, stagger } from "animejs";
 import { Star } from "../assets/star";
 import ArrowLogo from "../assets/arrow-logo";
 import { commentsContent } from '../data/allData';
+import { useMediaQuery } from "react-responsive";
 
 import "../styles/commentSection.css"
 
 export default function Comment() {
   const [actIndex, setActIndex] = useState(0);
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
 
   const showNext = () => {
 
@@ -40,8 +42,9 @@ export default function Comment() {
         duration: stagger(200, { start: 400 })
     });
   };
-
-  const commentsVisible = commentsContent.slice(actIndex, actIndex + 2);
+  
+  const setComment = () => {return isMobile ? 1 : 2};
+  const commentsVisible = commentsContent.slice(actIndex, actIndex + setComment());
 
 
       // Animacion para cuando la seccion entre en pantalla
