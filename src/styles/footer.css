@@ -1,11 +1,9 @@
 /*****************Footer*****************/
 .footer{
-  background-color: var(--negro);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  background-color: var(--negro);
   width: 100vw;
-  height: auto;
   font-weight: 600;
   font-size: 1.5rem;
 }
@@ -21,8 +19,8 @@
   flex-direction: column;
   justify-content: center;
   max-width: 520px;
-  height: 100%;
-  padding: 5rem;
+  width: auto;
+  padding: 5rem 4rem;
   gap: 1rem;
   background-color: var(--backgroud-email);
 }
@@ -61,12 +59,13 @@
 .footer-info{
   background-color: var(--negro);
   color:var(--blanco);
-  display: 	flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: start;
+  align-content: center;
   align-items: center;
   gap:2rem;
-  padding: 5rem;
+  padding: 0rem 4rem;
   width: 100%;
   height: 100%;
 }
@@ -102,4 +101,20 @@
 .footer-ul li > a:hover::after, .footer-ul li > a:focus::after{
   width: 100%;
   transition: all 0.3s var(--animacion);
+}
+
+@media (max-width: 1000px){
+  .footer-container{
+    flex-direction: column;
+  }
+  .footer-email{
+    max-width: 100%;
+    padding: 4rem 5rem;
+  }
+  .footer-info{
+    padding: 4rem 5rem;
+  }
+  .footer-ul-wrap{
+    flex-wrap: wrap;
+  }
 }
