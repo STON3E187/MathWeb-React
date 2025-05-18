@@ -52,6 +52,8 @@
     transform: translateY(1rem);
   }
 /*Card Content*/
+
+/* Que??? */
 .card-wrap{
   padding: 0 2rem;
 }
@@ -204,8 +206,43 @@
     .course-header{
       text-align: start;
     }
-
     .card-wrap{
       padding: 0;
+    }
+
+    /* Buttons */
+
+    .cards-buttons{
+      flex-direction: column;
+    }
+    .card-button.activate, .card-button:hover, .card-button:focus{
+      transform: translateY(0);
+    }
+
+    /* Inset Buttons */
+    .card-buttons{
+      gap:1rem;
+      flex-wrap: wrap;
+      /* Ojo aqui */
+      justify-content: center !important;
+      /* Ojo aqui */
+      padding: 0 !important; 
+    }
+    /* Card Content */
+    .card-wrap{
+      padding: 0;
+    }
+    .cards-container{
+      max-width: 100%;
+      width: 100%;
+    }
+    .card-text{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1.5rem;
+    }
+    .card-content{
+      min-width: 100%;
     }
 }
