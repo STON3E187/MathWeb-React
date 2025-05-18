@@ -88,15 +88,165 @@ export default function Courses(){
                 </div>
 
                 <div className="card-wrap">
-                    <MediaQuery maxWidth={1000}>
-                        
-                    </MediaQuery>
+                    <div className="cards-buttons">
+                        <button className={`card-button beginner ${courseLevel === "beginner" ? "activate" : ""}`} onClick={() => {changeLevel("beginner")}}>Nivel Principiante</button>
+                            <MediaQuery maxWidth={1000}>
+                                {courseLevel === "beginner" &&(
+                                    <div className={`cards-wrap ${courseLevel}`}>
+                                        {course && (
+                                            <div className={`cards-container ${courseLevel}`} >
+                                                <div className="card-text">
+                                                    <div className="card-content">
+                                                        <h2>Recursos</h2>
+                                                        {course.resources.map(function(element, index){
+                                                            return(
+                                                                <div key={index}>
+                                                                    <h3 >{element.type}</h3>
+                                                                    <ul className="content-list">
+                                                                        {element.items.map(function(item, index){
+                                                                            return(
+                                                                                <li key={index}>{item}</li>
+                                                                            );
+                                                                        })}
+                                                                    </ul>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+
+                                                    <div className="card-content">
+                                                        <h2>Contenido</h2>
+
+                                                        <ul className="content-list">
+                                                            {course.content.map(function(item, index){
+                                                                return(
+                                                                    <li key={index}>{item}</li>
+                                                                );
+                                                            })}
+                                                        </ul>
+
+                                                        <p className={`card-price ${courseLevel}`}>
+                                                            Desde ${course.price}<span className="discount">${course.originalPrice}</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div className="card-buttons">
+                                                    <ButtonLink href="#" color={courseLevel} content="Unirse al Curso"/>
+                                                    <ButtonLink href="#" color={courseLevel} content="Probar Gratis"/>
+                                                </div>
+
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </MediaQuery>
+                        <button className={`card-button intermediate ${courseLevel === "intermediate" ? "activate" : ""}`} onClick={() => {changeLevel("intermediate")}}>Nivel Intermedio</button>
+                            <MediaQuery maxWidth={1000}>
+                                {courseLevel === "intermediate" &&(
+                                    <div className={`cards-wrap ${courseLevel}`}>
+                                        {course && (
+                                            <div className={`cards-container ${courseLevel}`} >
+                                                <div className="card-text">
+                                                    <div className="card-content">
+                                                        <h2>Recursos</h2>
+                                                        {course.resources.map(function(element, index){
+                                                            return(
+                                                                <div key={index}>
+                                                                    <h3 >{element.type}</h3>
+                                                                    <ul className="content-list">
+                                                                        {element.items.map(function(item, index){
+                                                                            return(
+                                                                                <li key={index}>{item}</li>
+                                                                            );
+                                                                        })}
+                                                                    </ul>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+
+                                                    <div className="card-content">
+                                                        <h2>Contenido</h2>
+
+                                                        <ul className="content-list">
+                                                            {course.content.map(function(item, index){
+                                                                return(
+                                                                    <li key={index}>{item}</li>
+                                                                );
+                                                            })}
+                                                        </ul>
+
+                                                        <p className={`card-price ${courseLevel}`}>
+                                                            Desde ${course.price}<span className="discount">${course.originalPrice}</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div className="card-buttons">
+                                                    <ButtonLink href="#" color={courseLevel} content="Unirse al Curso"/>
+                                                    <ButtonLink href="#" color={courseLevel} content="Probar Gratis"/>
+                                                </div>
+
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </MediaQuery>
+                        <button className={`card-button advance ${courseLevel === "advance" ? "activate" : ""}`} onClick={() => {changeLevel("advance")}}>Nivel Avanzado</button>
+                            <MediaQuery maxWidth={1000}>
+                                    {courseLevel === "advance" &&(
+                                        <div className={`cards-wrap ${courseLevel}`}>
+                                            {course && (
+                                                <div className={`cards-container ${courseLevel}`} >
+                                                    <div className="card-text">
+                                                        <div className="card-content">
+                                                            <h2>Recursos</h2>
+                                                            {course.resources.map(function(element, index){
+                                                                return(
+                                                                    <div key={index}>
+                                                                        <h3 >{element.type}</h3>
+                                                                        <ul className="content-list">
+                                                                            {element.items.map(function(item, index){
+                                                                                return(
+                                                                                    <li key={index}>{item}</li>
+                                                                                );
+                                                                            })}
+                                                                        </ul>
+                                                                    </div>
+                                                                );
+                                                            })}
+                                                        </div>
+
+                                                        <div className="card-content">
+                                                            <h2>Contenido</h2>
+
+                                                            <ul className="content-list">
+                                                                {course.content.map(function(item, index){
+                                                                    return(
+                                                                        <li key={index}>{item}</li>
+                                                                    );
+                                                                })}
+                                                            </ul>
+
+                                                            <p className={`card-price ${courseLevel}`}>
+                                                                Desde ${course.price}<span className="discount">${course.originalPrice}</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="card-buttons">
+                                                        <ButtonLink href="#" color={courseLevel} content="Unirse al Curso"/>
+                                                        <ButtonLink href="#" color={courseLevel} content="Probar Gratis"/>
+                                                    </div>
+
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                            </MediaQuery>
+                    </div>
                     <MediaQuery minWidth={1000}>
-                        <div className="cards-buttons">
-                            <button className={`card-button beginner ${courseLevel === "beginner" ? "activate" : ""}`} onClick={() => {changeLevel("beginner")}}>Nivel Principiante</button>
-                            <button className={`card-button intermediate ${courseLevel === "intermediate" ? "activate" : ""}`} onClick={() => {changeLevel("intermediate")}}>Nivel Intermedio</button>
-                            <button className={`card-button advance ${courseLevel === "advance" ? "activate" : ""}`} onClick={() => {changeLevel("advance")}}>Nivel Avanzado</button>
-                        </div>
                         <div className={`cards-wrap ${courseLevel}`}>
                             {course && (
                                 <div className={`cards-container ${courseLevel}`} >
@@ -145,6 +295,7 @@ export default function Courses(){
                             )}
                         </div>
                     </MediaQuery>
+
                 </div>
         </section>
     );
