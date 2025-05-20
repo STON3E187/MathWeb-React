@@ -27,11 +27,17 @@
     html{
         font-size: var(--font-size-lg);
     }
+
 }
 
 @media (max-width: 768px){
     html{
         font-size: var(--font-size-md);
+    }
+    section{
+        --padding: 2rem;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
     }
 }
 
@@ -39,6 +45,7 @@
     html{
         font-size: var(--font-size-sm);
     }
+
 }
 
 @media (max-width: 480px){

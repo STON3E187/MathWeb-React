@@ -33,6 +33,10 @@
   transition: all .7s var(--animacion);
 }
 
+.comment-button svg{
+  width: 3.5rem;
+  height: auto;
+}
 .comment-button:first-child{
   transform: rotate(180deg);
 }
@@ -63,13 +67,14 @@
 .comment-head{
   color: var(--blanco);
   display: flex;
-  gap:0.5rem;
+  flex-wrap: wrap;
+  gap:var(--padding);
   padding: var(--padding);
 }
 
 .comment-head img{
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   background-color: var(--blanco);
   border-radius: 10rem;
   overflow: hidden;
@@ -130,4 +135,14 @@
   .comment-button{
     order: 2;
   }
+}
+
+@media (max-width: 480px){
+    .comment-container{
+    --padding: 0;
+    flex-wrap: wrap;
+    padding-left:var(--padding);
+    padding-right:var(--padding);
+  }
+
 }

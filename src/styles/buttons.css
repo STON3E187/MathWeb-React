@@ -13,6 +13,7 @@
   background-position: right bottom;
   transition: all .7s var(--animacion);
 }
+
 .button:hover, .button:focus{
   background-position:left bottom;
   color: var(--blanco);

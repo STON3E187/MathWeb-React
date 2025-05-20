@@ -4,7 +4,7 @@ export const headerLinks = [
     "link": "#"
   },
   {
-    "title": "Cursos y Precios",
+    "title": "Cursos",
     "link": "#"
   },
   {

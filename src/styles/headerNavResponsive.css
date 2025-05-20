@@ -32,6 +32,10 @@
     position: relative;
     z-index: 100;
   }
+  .nav-button svg{
+    width: 3rem;
+    height: auto;
+  }
   .overlay{
     position: fixed;
     width: 100vw;
@@ -52,21 +56,23 @@
     background-color: var(--rojo);
     position: fixed;
     display: flex;
-    width: min(75vw, 400px);
+    width: min(75vw, 15rem);
     top: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
+    height: 60vh;
     z-index: 10;
     transform: translateX(100vw);
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    background-color: var(--negro);
+    border-bottom-left-radius: 2rem;
   }
 
   .nav-menu-mobile.activate {
     transform: translateX(0vw);
     visibility: visible;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   .nav-menu-items{
@@ -74,7 +80,6 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: var(--negro);
   }
 
   .nav-menu-items li{
@@ -106,4 +111,8 @@
     width: 100%;
     transition: all 0.3s var(--animacion);
   }
+}
+
+@media (max-width: 480px){
+  
 }
