@@ -1,15 +1,18 @@
 /*****************Header*****************/
-.header-container{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  z-index: 999;
-  font-size: 1.5rem;
-  background-color: var(--nav-background);
-  padding: 1rem 4rem;
-  border-bottom:solid var(--nav-font-color) 4px;
-  color:var(--nav-font-color);
-}
+  .header-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 999;
+    font-size: 1.5rem;
+    background-color: var(--nav-background);
+    padding: 1rem 4rem;
+    color: var(--nav-font-color);
+    top: 0;
+    transition: all 0.3s ease;
+
+  }
 
 .header-menu{
   max-width: 1280px;
@@ -27,6 +30,8 @@
   align-items: center;
   gap:0.5rem;
   font-size: 1.5rem;
+  z-index: 10;
+
 }
 .logo svg{
   width: 3.5rem;

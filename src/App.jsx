@@ -25,7 +25,7 @@ function App() {
   return (
     <>
     {isMobile ? <HeaderResponsive /> : <Header />}
-    <main>
+    <main id="content">
       <Hero />
       <Courses />
       <SpecialPacks />

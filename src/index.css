@@ -62,8 +62,14 @@ body{
   line-height: 1.5;
 }
 /*From Jhey in codepen*/
-body::before {
+main{
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
 
+main::before {
   --size: 5rem;
   --line: color-mix(in hsl, canvasText, transparent 75%);
 
@@ -83,10 +89,6 @@ body::before {
   top: 0;
   pointer-events: none;
   z-index: -1;
-}
-main{
-  width: 100%;
-  height: 100%;
 }
 
 a , li{

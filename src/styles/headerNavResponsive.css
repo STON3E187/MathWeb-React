@@ -1,0 +1,109 @@
+/*****************Header*****************/
+/* Efectos cuando no está en el top */
+@media (prefers-reduced-motion: no-preference) {
+
+  .header-container.hide {
+    transform: translateY(calc(-100% - 4px));
+  }
+
+  .header-container.show {
+    transform: translateY(0);
+  }
+
+}
+@media (max-width: 1000px){
+
+  .header-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 50;
+    font-size: 2rem !important;
+    background-color: var(--nav-background);
+    padding: 1rem 2rem !important;
+    color: var(--nav-font-color);
+    top: 0;
+    transition: all 0.3s ease;
+  }
+  .nav-button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+  }
+  .overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 5;
+  }
+  .overlay.activate{
+    visibility: visible;
+    backdrop-filter: blur(5px);
+  }
+  .nav-menu-mobile{
+    background-color: var(--rojo);
+    position: fixed;
+    display: flex;
+    width: min(75vw, 400px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 10;
+    transform: translateX(100vw);
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu-mobile.activate {
+    transform: translateX(0vw);
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--negro);
+  }
+
+  .nav-menu-items li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0 !important;
+  }
+
+  .nav-menu-items li a{
+    padding: 1rem;
+  }
+
+  /*Linea de Animcacion de Link*/
+  .nav-menu-items li > a::after{
+    content: '';
+    position: relative;
+    display: block;
+    left: 0;
+    width: 0px;
+    height: 4px;
+    bottom: 4px;
+    background-color: var(--nav-font-color);
+    border-radius: 2rem;
+    transition: all 0.1s ease;
+  }
+
+  .nav-menu-items li > a:hover::after, .nav-menu-items li > a:focus::after{
+    width: 100%;
+    transition: all 0.3s var(--animacion);
+  }
+}
