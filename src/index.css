@@ -61,7 +61,7 @@ body{
   overflow-x: hidden;
   line-height: 1.5;
 }
-/*From Jhey in codepen*/
+
 main{
   position: relative;
   z-index: 0;
@@ -69,6 +69,8 @@ main{
   height: 100%;
 }
 
+/*From Jhey Tompkins in codepen*/
+/* https://jhey.dev/ */
 main::before {
   --size: 5rem;
   --line: color-mix(in hsl, canvasText, transparent 75%);

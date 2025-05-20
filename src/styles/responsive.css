@@ -22,3 +22,27 @@
         padding-right: var(--padding);
     }
 }
+
+@media (max-width: 800px){
+    html{
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 550px){
+    html{
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 480px){
+    html{
+        font-size: var(--font-size-tn);
+    }
+}
