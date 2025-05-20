@@ -26,16 +26,6 @@
     top: 0;
     transition: all 0.3s ease;
   }
-  .nav-button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 100;
-  }
-  .nav-button svg{
-    width: 3rem;
-    height: auto;
-  }
   .overlay{
     position: fixed;
     width: 100vw;
@@ -64,9 +54,9 @@
     z-index: 10;
     transform: translateX(100vw);
     visibility: hidden;
-    transition: all 0.2s ease;
     background-color: var(--negro);
     border-bottom-left-radius: 2rem;
+    transition: all 0.3s ease;
   }
 
   .nav-menu-mobile.activate {
@@ -91,6 +81,38 @@
 
   .nav-menu-items li a{
     padding: 1rem;
+  }
+
+    .nav-button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  .button-menu{
+    width: 3rem;
+    position: relative;
+    height: auto;
+    transition: all 0.4s ease;
+  }
+
+  .nav-button.activate .button-menu{
+    transform: rotate(360deg);
+    transition: all 0.4s ease;
+  }
+
+  .nav-button .button-menu path{
+    transition: all 0.4s ease;
+    transform: translateY(0%)
+  }
+
+  .nav-button.activate .button-menu path:first-child{
+    transform: translateY(30%)
+  }
+
+  .nav-button.activate .button-menu path:last-child{
+    transform: translateY(-29%)
   }
 
   /*Linea de Animcacion de Link*/

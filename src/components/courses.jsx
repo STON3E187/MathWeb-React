@@ -24,7 +24,9 @@ export default function Courses(){
     }
 
     // Animacion para cuando la seccion entre en pantalla
-    const scope = useRef(null);
+    const inViewAnimation = useRef(null);
+    const contentAnimation = useRef(null);
+
     const [containerRef, inView] = useInView({
         threshold: 0.5,
         triggerOnce: true
@@ -33,7 +35,7 @@ export default function Courses(){
     useEffect(() => {
         // Si entra en vision activa la animacion
         if (inView === true){
-            scope.current = createScope().add(()=>{
+            inViewAnimation.current = createScope().add(()=>{
             animate(".course", {
                 y: ['4rem', '0rem'],
                 opacity: 1,
@@ -56,26 +58,34 @@ export default function Courses(){
 
     // limpieza de la animacion
     return () => {
-        if (scope.current) scope.current.revert();
+        if (inViewAnimation.current) inViewAnimation.current.revert();
     };
 
     },[inView])
 
     // Efecto del ClipPath en los cursos
   useEffect(() => {
+    contentAnimation.current = createScope().add(() => {
 
-    // Origen de los ClipPath(Donde comienza el circulo)
-    const origins = {
-      beginner: "circle(0% at 15% -15%)",
-      intermediate: "circle(0% at 50% -15%)",
-      advance: "circle(0% at 85% -15%)"
-    };
+        // Origen de los ClipPath(Donde comienza el circulo)
+        const origins = {
+        beginner: "circle(0% at 15% -15%)",
+        intermediate: "circle(0% at 50% -15%)",
+        advance: "circle(0% at 85% -15%)"
+        };
 
-    animate(".cards-container", {
-      clipPath: [origins[courseLevel], "circle(100% at 50% 50%)"],
-      duration: 800,
-      easing: "easeInOutCubic",
+        animate(".cards-container", {
+        clipPath: [origins[courseLevel], "circle(100% at 50% 50%)"],
+        duration: 800,
+        easing: "ease",
+        });
+
+        // limpieza de la animacion
+        return () => contentAnimation.current.revert();
+
     });
+
+    
   }, [courseLevel]);
 
     return(

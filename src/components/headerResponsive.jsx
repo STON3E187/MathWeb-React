@@ -16,7 +16,7 @@ export default function HeaderResponsive() {
   
   const handleClick = () => { 
     setActivate(!activate);
-    !activate ? container.style.overflow = "hidden" : container.style.overflow = "auto"; 
+    !activate ? container.style.overflow = "hidden" : container.style.overflow = "auto";
   };
 
   const handleScroll = () => {
@@ -59,6 +59,7 @@ export default function HeaderResponsive() {
 
         <button className={`nav-button ${activate ? "activate" : ""}`} onClick={handleClick} aria-label="Menu">
           <svg
+            className="button-menu"
             width={50}
             height={50}
             viewBox="0 0 50 50"
