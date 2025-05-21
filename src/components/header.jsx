@@ -11,7 +11,7 @@ import "../styles/headerNavResponsive.css";
 
 export default function Header() {
   const [activate, setActivate] = useState(false);
-  const scrollDirection = useScrollDirection("down");
+  const scrollDirection = useScrollDirection({initialDirection : "down", thresholdPixels : 2, off : false});
   const [scrolledToTop, setScrolledToTop] = useState(true);
 
   const menuButtonRef = useRef(null);
