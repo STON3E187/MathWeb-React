@@ -9,7 +9,7 @@ export default function Footer(){
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-email">
-                    <p className="email-text">Suscríbete para recibir consejos y tácticas para crecer como deseas.</p>
+                    <p className="email-text">Suscríbete para recibir consejos, sumar conocimiento y restar dudas.</p>
                     <form className="email-form" method="post">
                         <input type="email" name="email-place" placeholder=" correo electronico" />
                         <button type="button"><ArrowLogo /></button>

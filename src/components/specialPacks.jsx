@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
 import { animate, createScope, stagger } from "animejs";
 import { packList } from "../data/allData";
 
@@ -10,11 +11,14 @@ export default function SpecialPacks(){
 
     // Animacion para cuando la seccion entre en pantalla
     const scope = useRef(null);
+    const isMobile = useMediaQuery({ maxWidth: 1000 });
+
     const [containerRef, inView] = useInView({
-        threshold: 0.5,
+        threshold: isMobile ? 0.3 : 0.5,
         triggerOnce: true
     });
 
+    
     useEffect(() => {
         // Si entra en vision activa la animacion
         if (inView === true){

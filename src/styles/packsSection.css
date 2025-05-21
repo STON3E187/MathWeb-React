@@ -12,7 +12,7 @@
 .packs-header{
   color: var(--azul-oscuro);
   align-self: center;
-  text-align: start;
+  text-align: center;
   font-size: 4rem;
   order: 2;
 }

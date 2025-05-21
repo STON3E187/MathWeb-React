@@ -6,6 +6,10 @@
   align-items: center;
   border-radius: 3rem;
 }
+.comments h2{
+  text-align: center;
+  color: var(--azul-oscuro);
+}
 
 /*Comments card*/
 .comment-container {
@@ -67,14 +71,15 @@
 .comment-head{
   color: var(--blanco);
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap:var(--padding);
   padding: var(--padding);
 }
 
 .comment-head img{
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   background-color: var(--blanco);
   border-radius: 10rem;
   overflow: hidden;
