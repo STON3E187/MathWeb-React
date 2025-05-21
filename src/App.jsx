@@ -1,12 +1,6 @@
-// Herramientas
-import { useMediaQuery } from "react-responsive";
-
-// Secciones Responsive
-import HeaderResponsive from "./components/headerResponsive";
-
 // Secciones
-import Courses from "./components/courses";
 import Header from "./components/header";
+import Courses from "./components/courses";
 import Hero from "./components/hero";
 import LearnProcess from "./components/learnProcess";
 import SpecialPacks from "./components/specialPacks";
@@ -19,12 +13,10 @@ import "./index.css";
 import "./styles/responsive.css"
 
 function App() {
-
-  const isMobile = useMediaQuery({ maxWidth: 1000 });
   
   return (
     <>
-    {isMobile ? <HeaderResponsive /> : <Header />}
+    <Header />
     <main id="content">
       <Hero />
       <Courses />
