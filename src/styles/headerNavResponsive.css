@@ -37,6 +37,8 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 5;
+    pointer-events:auto !important;
+    user-select: auto !important;
   }
   .overlay.activate{
     visibility: visible;
