@@ -18,7 +18,14 @@ export default function SpecialPacks(){
     useEffect(() => {
         // Si entra en vision activa la animacion
         if (inView === true){
-            scope.current = createScope().add(()=>{
+            scope.current = createScope({
+                mediaQueries:{
+                    isSmall : "(min-width: 1000px)"
+                }
+            }).add(self =>{
+
+                const { isSmall } = self.matches;
+
                     animate(".packs", {
                         y: ['4rem', '0rem'],
                         opacity: 1,
@@ -26,14 +33,17 @@ export default function SpecialPacks(){
                         duration: 400,
                     });
 
-                    // Efecto cascada de los packs
-                    animate(".pack-card", {
-                        y: ['5rem', '0rem'],
-                        opacity: [0, 1],
-                        easing: "inOutCubic",
-                        delay: stagger(100),
-                        duration: stagger(100, { start: 500 })
-                    });
+                    if(isSmall === true){
+
+                        // Efecto cascada de los packs solo en Escritorio
+                        animate(".pack-card", {
+                            y: ['5rem', '0rem'],
+                            opacity: [0, 1],
+                            easing: "inOutCubic",
+                            delay: stagger(100),
+                            duration: stagger(100, { start: 500 })
+                        });
+                    }
         });}
 
     // limpieza de la animacion
