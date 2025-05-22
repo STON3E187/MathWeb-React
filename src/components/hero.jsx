@@ -121,7 +121,7 @@ export default function Hero(){
 
                 <MediaQuery minWidth={1000}>
                     <span className="red secondStep">No&nbsp;</span>
-                    <span className="red firstStep">Necesistas&nbsp;</span>
+                    <span className="red firstStep">Necesitas&nbsp;</span>
                     <span className="red thirdStep">+&nbsp;Memoria</span>
                     <span className="blue fourStep">Entender&nbsp;+</span>
                 </MediaQuery>
@@ -129,7 +129,7 @@ export default function Hero(){
                 <MediaQuery maxWidth={1000}>
                     <span className="red firstStep">No&nbsp;</span>
                     <span className="red secondStep">+&nbsp;Memoria</span>
-                    <span className="red thirdStep">Necesistas&nbsp;</span>
+                    <span className="red thirdStep">Necesitas&nbsp;</span>
                     <span className="blue fourStep">Entender&nbsp;+</span>
                 </MediaQuery>
                 
