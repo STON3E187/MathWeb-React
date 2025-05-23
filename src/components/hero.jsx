@@ -57,7 +57,7 @@ export default function Hero(){
             .add(
                 ".thirdStep",
                 {
-                    x: "-30rem",
+                    x: "-28rem",
                     ease: "inOutCubic"
                 },
                 "<"
